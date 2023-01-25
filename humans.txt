@@ -1,0 +1,13 @@
+/* TEAM */
+
+Design & Development: Kind
+URL: https://mathayward.com
+Description: Photographer and designer
+
+/* THANKS */
+
+Github Pages - https://pages.github.com/
+
+/* SITE */
+
+Standards: HTML5, CSS3

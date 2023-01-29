@@ -1,0 +1,49 @@
+:root{
+    --beige: #efe6d4;
+    --green-dark: #151917
+}
+
+.b-beige {
+  background-color: var(--beige);
+}
+
+.c-beige {
+  color: var(--beige);
+}
+
+.br-beige {
+  border-color: var(--beige);
+}
+
+.b-green-dark {
+  background-color: var(--green-dark);
+}
+
+.c-green-dark {
+  color: var(--green-dark);
+}
+
+.br-green-dark {
+  border-color: var(--green-dark);
+}
+
+.b-black {
+  background-color: black;
+}
+
+.b-white {
+  background-color: white;
+}
+
+.c-black {
+  color: black;
+}
+
+.c-white {
+  color: white;
+}x§
+
+.b-green-dark--grad {
+  background-color: var(--green-dark);
+  background: linear-gradient(0deg, rgba(35, 44, 39,1) 0%, rgba(35, 44, 39,0) 100%);
+}

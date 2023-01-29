@@ -1,0 +1,12 @@
+@import "_colors";
+@import "_nav";
+
+
+
+body {
+  @apply
+    b-green-dark
+    c-beige
+    font-sans
+  ;
+}

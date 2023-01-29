@@ -1,0 +1,36 @@
+.nav {
+    @apply
+        list-none
+        flex
+        gap-8
+        justify-center
+        lg:gap-32
+    ;
+}
+.nav-item {
+    @apply
+        text-lg
+        font-light
+        tracking-wide
+        uppercase
+        lg:text-xl
+    ;
+}
+
+.nav-item a {
+    @apply c-beige;
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+    @apply underline;
+}
+
+.social-nav {
+    @apply
+        list-none
+        flex
+        gap-8
+        text-base
+    ;
+}

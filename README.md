@@ -8,3 +8,16 @@
 
 
 ## Installation
+
+1. Install Jekyll
+
+Follow the instructions at: [https://jekyllrb.com/docs/installation/](https://jekyllrb.com/docs/installation/)
+
+2. Install packages
+
+$ bundle install
+$ npm install
+
+3. Run it
+
+$ bundle exec jekyll serve

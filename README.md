@@ -16,12 +16,12 @@ Follow the instructions at: [https://jekyllrb.com/docs/installation/](https://je
 ### 2. Install packages
 
 ```console
-$ bundle install
-$ npm install
+bundle install
+npm install
 ```
 
 ### 3. Run it
 
 ```console
-$ bundle exec jekyll serve
+bundle exec jekyll serve
 ```

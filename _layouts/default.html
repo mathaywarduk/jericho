@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
 
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800" rel="preload" as="style">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&family=Roboto+Slab:wght@100;300" rel="preload" as="style">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/assets/js/app.js"></script>
 
@@ -90,9 +90,74 @@
     }
     </script>
   </head>
-  <body>
+  <body class="{{ page.bodyClass }}">
+    <header class="flex flex-col items-center overflow-hidden w-screen absolute top-0 bottom-0 z-50 md:overflow-visible md:sticky">
+        <a href="/" class="my-8"><img src="/assets/images/logo.svg" alt="Restaurant Jericho logo" width="300" height="96" class="max-w-48"></a>
+        <button data-toggle data-toggle-fixed aria-controls="mobileNav" class="mobile-nav-toggle md:hidden"><span><span class="sr-only">Toggle Menu</span></span></button>
+        <nav class="w-full mobile-nav" id="mobileNav" role="navigation">
+          <ul class="text-center md:hidden">
+            {% for nav_item in site.data.nav %}
+              <li class="mobile-nav-item
+              {% if nav_item.url == page.url %}
+                  is-active
+                {% elsif page.url contains nav_item.url and nav_item.url != '/' %}
+                  is-active
+                {% endif %}"><a href="{{ nav_item.url }}" {% if nav_item.target %} target="{{ nav_item.target }}" {% endif %} class="block py-6">{{ nav_item.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <nav class="nav flex justify-center xl:justify-between gap-8">
+            {% assign split2Start = site.data.nav.size | divided_by:2 %}
+            {% assign split1End = split2Start | minus:1 %}
+            {% assign split2End = site.data.nav.size | minus:1 %}
+          <ul class="flex justify-center gap-8 xl:gap-24">
+
+            {% for i in (0..split1End) %}
+              {% assign nav_item = site.data.nav[i] %}
+              <li class="nav-item
+              {% if nav_item.url == page.url %}
+                  is-active
+                {% elsif page.url contains nav_item.url and nav_item.url != '/' %}
+                  is-active
+                {% endif %}"><a href="{{ nav_item.url }}" {% if nav_item.target %} target="{{ nav_item.target }}" {% endif %} class="">{{ nav_item.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <ul class="flex justify-center gap-8 xl:gap-24">
+            {% for i in (split2Start..split2End) %}
+              {% assign nav_item = site.data.nav[i] %}
+              <li class="nav-item
+              {% if nav_item.url == page.url %}
+                  is-active
+                {% elsif page.url contains nav_item.url and nav_item.url != '/' %}
+                  is-active
+                {% endif %}"><a href="{{ nav_item.url }}" {% if nav_item.target %} target="{{ nav_item.target }}" {% endif %} class="">{{ nav_item.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+    </header>
     <main>
       {{ content }}
     </main>
+    <footer class="container mb-5">
+      <nav class="mb-5">
+        <ul class="social-nav">
+          <li>
+            <a href="https://www.instagram.com/restaurantjericho" target="_blank"><img src="/assets/images/icons/instagram.svg" alt="Instagram logo" width="32" height="32" class="social-logo"></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/restaurantjericho" target="_blank"><img src="/assets/images/icons/facebook.svg" alt="Facebook logo" width="32" height="32" class="social-logo"></a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="flex flex-col md:flex-row md:flex-wrap gap-3 lg:gap-6 mb-3 lg:mb-5">
+        <li><a href="mailto:reservations@restaurantjericho.com" class="link-small">reservations@restaurantjericho.com</a></li>
+        <li><a href="tel:+441949869733" class="link-small">01949 869733</a></li>
+      </ul>
+      <ul class="flex flex-col md:flex-row md:flex-wrap gap-3 lg:gap-6">
+        <li><a href="https://goo.gl/maps/brBhbeBDJh2dLJ6z8" target="_blank" class="link-small">Directions</a></li>
+        <li><a href="/terms" target="_blank" class="link-small">Terms and conditions</a></li>
+        <li class="md:order-1">&copy; 2023 Restaurant Jericho</li>
+      </ul>
+    </footer>
   </body>
 </html>

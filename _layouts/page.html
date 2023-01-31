@@ -1,8 +1,28 @@
 ---
 layout: default
 ---
-<main class="relative z-10 mt-[175px] md:mt-0">
-  <div class="container">
-    {{ content }}
+<!-- START: Hero -->
+{% if page.hero.align == 'left' %}
+  {% capture blockClasses %}block w-full pt-5 self-center relative right-12 {% endcapture %}
+{% else %}
+  {% capture blockClasses %}block w-full pt-5 self-center relative left-12 {% endcapture %}
+{% endif %}
+<div class="md:flex md:-mx-4 md:container md:relative {% if page.hero.align == 'left' %}md:justify-end{% endif %} hero">
+  <div class="relative z-10 mt-[175px] md:mt-0 md:flex md:max-w-1/2 {% if page.hero.align == 'left' %}md:order-2{% endif %}">
+    
+    {% include image.html url=page.hero.image.url alt=page.hero.image.alt fit="crop" lazy="false" width="820" height="547" block_classes=blockClasses classes="hero-image" ar="4:3" lgar=page.hero.image.ar %}
+    
   </div>
-</main>
+  
+  <div class="container -mt-24 relative z-10 md:mt-0 md:no-container md:w-3/5 md:mx-4 md:absolute
+    {% if page.hero.align == 'left' %}
+      md:order-1 md:top-1/20
+      {% if page.hero.image.ar == '3:4'%} md:left-24 {% else %} md:left-12 {% endif %}
+    {% else %}
+      md:bottom-1/20
+      {% if page.hero.image.ar == '3:4'%} md:right-24 {% else %} md:right-12 {% endif %}
+    {% endif %}">
+    <h1>{{ page.hero.text}}</h1>
+  </div>
+</div>
+<!-- END: Hero -->

@@ -36,8 +36,14 @@ module.exports = {
         75: "18.75rem",
         "container": "160rem", 
       },
+      maxHeight: {
+        "75vh": "75vh",
+      },
       height: {
         "screen-plus": "110vh",
+      },
+      inset: {
+        "1/20": "5%",
       }
     },
   },

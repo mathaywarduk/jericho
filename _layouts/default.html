@@ -92,10 +92,10 @@
   </head>
   <body class="{{ page.bodyClass }}">
     <header class="flex flex-col items-center overflow-hidden w-screen absolute top-0 bottom-0 z-50 md:overflow-visible md:sticky">
-        <a href="/" class="my-8"><img src="/assets/images/logo.svg" alt="Restaurant Jericho logo" width="300" height="96" class="max-w-48"></a>
-        <button data-toggle data-toggle-fixed aria-controls="mobileNav" class="mobile-nav-toggle md:hidden"><span><span class="sr-only">Toggle Menu</span></span></button>
-        <nav class="w-full mobile-nav" id="mobileNav" role="navigation">
-          <ul class="text-center md:hidden">
+        <a href="/" class="my-8 relative z-20"><img src="/assets/images/logo.svg" alt="Restaurant Jericho logo" width="300" height="96" class="max-w-48"></a>
+        <button data-toggle data-toggle-fixed aria-controls="mobileNav" class="mobile-nav-toggle relative z-20 md:hidden"><span><span class="sr-only">Toggle Menu</span></span></button>
+        <nav class="w-full mobile-nav md:hidden" id="mobileNav" role="navigation">
+          <ul class="text-center">
             {% for nav_item in site.data.nav %}
               <li class="mobile-nav-item
               {% if nav_item.url == page.url %}

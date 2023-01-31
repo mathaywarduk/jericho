@@ -1,0 +1,15 @@
+.hero {
+  @screen md {
+    height: calc(100vh - 160px);
+  }
+  @screen xl {
+    height: calc(100vh - 125px);
+  }
+}
+
+.hero-image {
+  @apply
+    max-h-75vh
+    w-auto
+  ;
+}

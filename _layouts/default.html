@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
 
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&family=Roboto+Slab:wght@100;300" rel="preload" as="style">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&family=Roboto+Slab:wght@100;300" rel="preload" as="style">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="/assets/js/app.js"></script>
 
@@ -138,14 +138,14 @@
     <main>
       {{ content }}
     </main>
-    <footer class="container mb-5">
+    <footer class="container mb-5 {% if page.url == '/food' %} relative -mt-[240px] md:-mt-[140px] z-10 c-grey-dark {% else %} c-beige {% endif %}">
       <nav class="mb-5">
         <ul class="social-nav">
           <li>
-            <a href="https://www.instagram.com/restaurantjericho" target="_blank"><img src="/assets/images/icons/instagram.svg" alt="Instagram logo" width="32" height="32" class="social-logo"></a>
+            <a href="https://www.instagram.com/restaurantjericho" target="_blank" class="hover:opacity-80 focus:opacity-80 transition-all duration-200 ease-in-out">{% include instagram.html %}<span class="sr-only">Instagram</span></a>
           </li>
           <li>
-            <a href="https://www.facebook.com/restaurantjericho" target="_blank"><img src="/assets/images/icons/facebook.svg" alt="Facebook logo" width="32" height="32" class="social-logo"></a>
+            <a href="https://www.facebook.com/restaurantjericho" target="_blank" class="hover:opacity-80 focus:opacity-80 transition-all duration-200 ease-in-out">{% include facebook.html %}<span class="sr-only">Facebook</span></a>
           </li>
         </ul>
       </nav>

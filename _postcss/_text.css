@@ -1,8 +1,10 @@
 h1,
 .h1 {
   @apply
-    text-2xl
-    md:text-4xl
+    text-lg
+    awks:text-xl
+    md:text-2xl
+    xl:text-4xl
     font-serif
     font-thin
     leading-tight
@@ -15,7 +17,7 @@ h1,
 h2,
 .h2 {
   @apply
-    text-2xl
+    text-lg
     md:text-3xl
     font-serif
     font-light

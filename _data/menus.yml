@@ -1,75 +1,41 @@
 - title: Tasting Menu
-  cost: £90 per person
-  drinks: Paired Wines £60
+  cost: "£90 per person
+
+  Paired wines: £60
+
+  Kitchen Bench: £110 per person"
   courses:
-    - description: "Pork Skin, Fermented Homey Skyr, Hawthorne, Apple"
-    - description: "Salt Beef, Garum, Ramson Capers,"
-    - description: "Tongue Pastrami, Sorrely Mayo"
-    - description: "Ceps, Chicken Liver Parfait, Blackcurrant"
+    - description: "Pig Skin, Fennel, Whey Caramel"
+    - description: "Jericho Charcuterie"
+    - description: "Balfour ‘the White’ 2021, Kent"
+      type: drink
       space: true
-    - description: "Last of the Tomatoes Water"
+    - description: "Potato Farl, Sour Cream"
+    - description: "Beauvale Croustade, Apple, Sorrel"
+    - description: "Lamb Heart, Maple, Chimichurri"
+    - description: "Planeta 'cometa' 2021, Sicily"
+      type: drink
       space: true
-    - description: "Waldorf Tart, Celery, Apple, Cropwell Stilton, Pear, Walnut"
-    - description: "Maize Brulee, Scallop, Scallop Roe, Dill"
-    - description: "Potato Sourdough, Raw & Burnt Onion Butters"
+    - description: "Our Bread, Raw Butter, Radish, Gochujang"
+    - description: "Oyster, Strawberry, Buttermilk"
+    - description: "Demorgenzon 'dmz' Chenin Blanc, Stellenbosch, 2021"
+      type: drink
       space: true
-    - description: "Partridge, Pork Jowl, Pear, Black Truffle"
-    - description: "Dry Aged Pork, Boudin Noir, Damson, Rye"
-    - description: "Muntjac, Ramen Broth, Girolle, Quaill Egg"
-    - description: "Chuck Top, Heart, Beetroot, Bone Marrow"
+    - description: "Carrot, Skyr, Elderflower"
+    - description: "Pea, Corn, Mint"
+    - description: "Famille Hugel ‘classic’ Riesling, Alsace, 2019"
+      type: drink
       space: true
-    - description: "Aka Shiso"
+    - description: "Mackerel, Gooseberry, Green Strawberry"
+    - description: "Pigs Head, Apple, Hot Sauce"
+    - description: "Thymiopoulos Xinomavro Greece, 2019"
+      type: drink
       space: true
-    - description: "Jake’s Mums Honey, Brioche, Tomato, Skyr, Bee Pollen"
-    - description: "Maize Creme Brulle, Black Olive, Lime"
-    - description: "Fresh Cheese, Rosehip, Pickle Bread, Ferments"
-- title: Vegetarian Tasting Menu
-  cost: £90 per person
-  drinks: Paired Wines £60
-  courses:
-    - description: "Fork Skin, Fermented Homey Skyr, Hawthorne, Apple"
-    - description: "Salt Beef, Garum, Ramson Capers,"
-    - description: "Tongue Pastrami, Sorrely Mayo"
-    - description: "Ceps, Chicken Liver Parfait, Blackcurrant"
+    - description: "1 Year Aged Beef, Gompa, Sugar Cured Egg Yolk"
+    - description: "Jerk, Lambs Liver, Date"
+    - description: "Silage Ice Cream"
+    - description: "Kuhlmann-platz 'cuvée Prestige' Gewürztraminer, Alsace, 2019"
+      type: drink
       space: true
-    - description: "Last of the Tomatoes Water"
-      space: true
-    - description: "Waldorf Tart, Celery, Apple, Cropwell Stilton, Pear, Walnut"
-    - description: "Maize Brulee, Scallop, Scallop Roe, Dill"
-    - description: "Potato Sourdough, Raw & Burnt Onion Butters"
-      space: true
-    - description: "Partridge, Pork Jowl, Pear, Black Truffle"
-    - description: "Dry Aged Pork, Boudin Noir, Damson, Rye"
-    - description: "Muntjac, Ramen Broth, Girolle, Quaill Egg"
-    - description: "Chuck Top, Heart, Beetroot, Bone Marrow"
-      space: true
-    - description: "Aka Shiso"
-      space: true
-    - description: "Jake’s Mums Honey, Brioche, Tomato, Skyr, Bee Pollen"
-    - description: "Maize Creme Brulle, Black Olive, Lime"
-    - description: "Fresh Cheese, Rosehip, Pickle Bread, Ferments"
-- title: Pescetarian Tasting Menu
-  cost: £90 per person
-  drinks: Paired Wines £60
-  courses:
-    - description: "Fish Skin, Fermented Homey Skyr, Hawthorne, Apple"
-    - description: "Salt Beef, Garum, Ramson Capers,"
-    - description: "Tongue Pastrami, Sorrely Mayo"
-    - description: "Ceps, Chicken Liver Parfait, Blackcurrant"
-      space: true
-    - description: "Last of the Tomatoes Water"
-      space: true
-    - description: "Waldorf Tart, Celery, Apple, Cropwell Stilton, Pear, Walnut"
-    - description: "Maize Brulee, Scallop, Scallop Roe, Dill"
-    - description: "Potato Sourdough, Raw & Burnt Onion Butters"
-      space: true
-    - description: "Partridge, Pork Jowl, Pear, Black Truffle"
-    - description: "Dry Aged Pork, Boudin Noir, Damson, Rye"
-    - description: "Muntjac, Ramen Broth, Girolle, Quaill Egg"
-    - description: "Chuck Top, Heart, Beetroot, Bone Marrow"
-      space: true
-    - description: "Aka Shiso"
-      space: true
-    - description: "Jake’s Mums Honey, Brioche, Tomato, Skyr, Bee Pollen"
-    - description: "Maize Creme Brulle, Black Olive, Lime"
-    - description: "Fresh Cheese, Rosehip, Pickle Bread, Ferments"
+    - description: "Raw Creme Fraiche, Berries, Rocket"
+    - description: "Langar Honey, Raw Cream, Tamari"

@@ -91,7 +91,7 @@
     </script>
   </head>
   <body class="{{ page.bodyClass }}">
-    <header class="flex flex-col items-center overflow-hidden w-screen absolute top-0 bottom-0 z-50 md:overflow-visible md:sticky">
+    <header class="flex flex-col items-center overflow-hidden w-full absolute top-0 bottom-0 z-50 md:overflow-visible md:sticky">
         <a href="/" class="my-8 relative z-20"><img src="/assets/images/logo.svg" alt="Restaurant Jericho logo" width="300" height="96" class="max-w-48"></a>
         <button data-toggle data-toggle-fixed aria-controls="mobileNav" class="mobile-nav-toggle relative z-20 md:hidden"><span><span class="sr-only">Toggle Menu</span></span></button>
         <nav class="w-full mobile-nav md:hidden" id="mobileNav" role="navigation">
@@ -150,12 +150,13 @@
         </ul>
       </nav>
       <ul class="flex flex-col md:flex-row md:flex-wrap gap-3 lg:gap-6 mb-3 lg:mb-5">
-        <li><a href="mailto:reservations@restaurantjericho.com" class="link-small">reservations@restaurantjericho.com</a></li>
-        <li><a href="tel:+441949869733" class="link-small">01949 869733</a></li>
+        {% comment %}<li><a href="mailto:reservations@restaurantjericho.com" class="link-small">reservations@restaurantjericho.com</a></li>{% endcomment %}
+        <li><a href="mailto:restaurantjericho@icloud.com" class="link-small">restaurantjericho@icloud.com</a></li>
+        <li><a href="tel:+441949728288" class="link-small">01949 728288</a></li>
       </ul>
       <ul class="flex flex-col md:flex-row md:flex-wrap gap-3 lg:gap-6">
         <li><a href="https://goo.gl/maps/brBhbeBDJh2dLJ6z8" target="_blank" class="link-small">Directions</a></li>
-        <li><a href="/terms" target="_blank" class="link-small">Terms and conditions</a></li>
+        <li><a href="/terms" class="link-small">Terms and conditions</a></li>
         <li class="md:order-1">&copy; 2023 Restaurant Jericho</li>
       </ul>
     </footer>

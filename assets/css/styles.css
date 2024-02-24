@@ -943,6 +943,17 @@ a.link--dark:focus {
   background-image: linear-gradient(transparent, transparent), linear-gradient(var(--green-dark), var(--green-dark));
 }
 
+a.link--dark-orange {
+  color: var(--orange-dark);
+  background-image: linear-gradient(transparent, transparent), linear-gradient(var(--orange-dark), var(--orange-dark));
+}
+
+a.link--dark-orange:hover,
+a.link--dark-orange:focus {
+  color: var(--green-dark);
+  background-image: linear-gradient(transparent, transparent), linear-gradient(var(--green-dark), var(--green-dark));
+}
+
 a.link-small {
   font-family: open-sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
@@ -1625,6 +1636,15 @@ body {
   .md\:right-0 {
     right: 0px;
   }
+  .md\:top-8 {
+    top: 2rem;
+  }
+  .md\:z-10 {
+    z-index: 10;
+  }
+  .md\:z-20 {
+    z-index: 20;
+  }
   .md\:order-1 {
     order: 1;
   }
@@ -1717,6 +1737,9 @@ body {
   }
   .md\:gap-16 {
     gap: 4rem;
+  }
+  .md\:self-start {
+    align-self: flex-start;
   }
   .md\:overflow-visible {
     overflow: visible;

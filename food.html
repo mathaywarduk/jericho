@@ -92,7 +92,7 @@
     </script>
   </head>
   <body class="">
-    <header class="flex flex-col items-center overflow-hidden w-full absolute top-0 bottom-0 z-50 md:overflow-visible md:sticky">
+    <header class="flex flex-col items-center overflow-hidden w-full absolute top-0 bottom-0 z-50 md:overflow-visible md:sticky md:z-10">
         <a href="/" class="my-8 relative z-20"><img src="/assets/images/logo.svg" alt="Restaurant Jericho logo" width="300" height="96" class="max-w-48"></a>
         <button data-toggle data-toggle-fixed aria-controls="mobileNav" class="mobile-nav-toggle relative z-20 md:hidden"><span><span class="sr-only">Toggle Menu</span></span></button>
         <nav class="w-full mobile-nav md:hidden" id="mobileNav" role="navigation">
@@ -338,8 +338,8 @@ We do not Cater to Pescatarians, Vegetarians, Vegans&nbsp;or&nbsp;dislikes.</p>
 
   
   <!-- START: Menus -->
-  <section class="container b-beige c-black pt-12 pb-[300px] md:pb-[240px] bg-leaf-orange">
-    <div class="lg:w-5/6 lg:mx-auto">
+  <section class="container b-beige c-black pt-12 pb-[300px] md:pb-[240px] bg-leaf-orange relative md:z-20">
+    <div class="lg:w-5/6 lg:mx-auto relative">
       <h2>Sample Menu</h2>
       <p class="xl:max-w-7/12">Our menu changes based on what is seasonal and fresh, please see our sample menu to provide an idea of the format.</p>
       <div data-tabs>
@@ -348,10 +348,11 @@ We do not Cater to Pescatarians, Vegetarians, Vegans&nbsp;or&nbsp;dislikes.</p>
           
           <div id="menu-1">
             <div class="md:flex md:justify-between md:mb-12">
-              <div class="font-type text-base md:text-md mb-6 md:order-2">
+              <div class="font-type text-base md:text-md mb-6 md:order-2 md:sticky md:top-8 md:self-start">
                 £105 per person<br />
 Paired wines: £70<br />
-Kitchen Bench: £120 per person
+Kitchen Bench: £120 per person<br><br>
+                <a href="https://booking.resdiary.com/widget/Standard/RestaurantJericho/37740" target="_blank" class="link link--dark-orange">Make a reservation</a>
               </div>
               <ul class="mb-12 font-extralight text-base md:text-md">
               

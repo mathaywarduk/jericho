@@ -19,7 +19,7 @@ body:
               alt: "Chef Richard Stevens in the Jericho kitchen garden"
               orientation: portrait
     textBlocks:
-        - text: "Our Twelve Course Tasting menu offers a food experience.
+        - text: "Our Twenty Course Tasting menu offers a food experience.
 
 
             Expect a relaxed evening, on our family farm enjoying great food, music and delicious&nbsp;wine. 
@@ -28,9 +28,10 @@ body:
             Join us in our main dining room or book the kitchen&nbsp;bench. 
 
 
-            Dinner at £90 per person
+            Dinner at £105 per person
 
-            Wine Flight at £60 per person 
+
+            Wine Flight at £70 per person
 
 
             We do not Cater to Pescatarians, Vegetarians, Vegans or&nbsp;dislikes."

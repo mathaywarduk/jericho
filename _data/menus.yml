@@ -5,48 +5,41 @@
 
   Kitchen Bench: £120 per person"
   courses:
-    - description: "Pig Skin, Birch"
+    - description: "Bramley Apple, Lincolnshire Poacher, Ox Liver"
     - description: "Jericho Charcuterie"
       space: true
-    - description: "Winter Broth"
-    - description: "Demorgenzon Dmz Chenin Blanc, Stellenbosch"
+    - description: "I Wish I Was a Ninja Pet Nat Testalonga El Bandito"
       type: drink
+    - description: "Asparagus"
+    - description: "Blood Bread, Pancetta"
+    - description: "Chicken Schnitzel"
+    - description: "Lambs Heart"
+    - description: "Farl, Beetroot, Green Strawberry"
       space: true
-    - description: "Wild Boar, Fennel, Apple"
-    - description: "Pork Pie"
-    - description: "Celeriac, Lamb"
-    - description: "Pig Cheek, Marmite"
-    - description: "Goat, Silage"
     - description: "Novas Chardonnay, Casablanca Valley"
       type: drink
+    - description: "Our Bread, Our Butters, Vintage Poacher, Honey"
+    - description: "Fennel Salad"
       space: true
-    - description: "Our Bread, Our Butters"
-    - description: "Sobrassada Jam"
-    - description: "Cabbage Soup, Chorizo"
-    - description: "Vismino Kisi, Artana"
+    - description: "Rózsa Petsovits Rose Weninger, Sopron"
       type: drink
+    - description: "Ox Tail Soup, Tomato"
+    - description: "Naked Oats, Oregano, Lincolnshire Poacher 50"
       space: true
-    - description: "Turnip, Rapeseed, Bramley Apple"
-    - description: "Carrot, Mushroom Miso"
-    - description: "Baby Bandito Keep on Punching Testalonga, Swartland"
+    - description: "Vdf Reynard Rebels, Provence"
       type: drink
+    - description: "Raw Lamb, Lettuce, Asparagus"
+    - description: "Chicken Breast, Kimchi"
       space: true
-    - description: "Parsnip Chawanmushi, Hazelnut, Bramley Apple"
-    - description: "Mallard, Black Garlic"
     - description: "Judith Beck Ink, Burgenland"
       type: drink
+    - description: "Dry Aged Pork, Buttermilk, Prune, Xo"
+    - description: "Cull Cow Fillet & Onglet, Chilli, Smoked Date"
       space: true
-    - description: "Pork, Rhubarb, Ginger"
-    - description: "Aged Sirloin, Wholecrop Silage, Brassica"
+    - description: "Whole Crop Silage Ice Cream"
       space: true
-    - description: "Silage Ice Cream"
-    - description: "Banyuls Rimage, Roussillion"
+    - description: "Muscat De Rivesaltes Enfants Sauvages, Roussillon"
       type: drink
-      space: true
-    - description: "Blood Orange, Buttermilk, Egg Yolk"
-    - description: "Artichoke, Whey, White Stilton"
-      space: true
-    - description: "Treacle Bread, Stilton"
-
-
-    
+    - description: "Strawberry, Elderflower, White Stilton"
+    - description: "Jersey Royal"
+    - description: "Apple Pasty, White Stilton, Honey"

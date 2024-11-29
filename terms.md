@@ -15,7 +15,7 @@ Due to the nature of the menu, we do not cater to Vegans, Vegetarians, Pescatari
 
 Our restaurant is an intimate setting; the largest table we can accommodate for is 6 guests, should you wish to book for 4 or more people, we will need 14 days notice for cancellation, otherwise a full dinner fee, per head, will be charged.
 
-We ask for a deposit of £50 per guest for a dining reservation. This is fully redeemable against your bill and will automatically be deducted on the day. We require 72 hours’ notice in writing for any cancellations or modifications for all reservations. Should you cancel within the 72 hour cancellation period, a full £105 per head will be charged. (Your deposit will be included in this).
+We ask for a non-refundable deposit of £50 per guest for a dining reservation. This is fully redeemable against your bill and will automatically be deducted on the day. We require 72 hours’ notice in writing for any cancellations or modifications for all reservations. Should you cancel within the 72 hour cancellation period, a full £105 per head will be charged. (Your deposit will be included in this).
 
 All bills are inclusive of a discretionary 12.5% service charge.
 
@@ -31,4 +31,4 @@ Our restaurant is an intimate setting; the largest table we can accommodate for 
 
 All bills are inclusive of a discretionary 12.5% service charge.
 
-We require 72 hours’ notice in writing for any cancellations or modifications for all reservations. Should you cancel within the 72 hour cancellation period, a full £35 per head will be charged. 
+We require 72 hours’ notice in writing for any cancellations or modifications for all reservations. Should you cancel within the 72 hour cancellation period, a full £35 per head will be charged.

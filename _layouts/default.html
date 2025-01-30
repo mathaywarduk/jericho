@@ -92,8 +92,8 @@
     </script>
   </head>
   <body class="{{ page.bodyClass }}">
-    <header class="flex flex-col items-center overflow-hidden w-full absolute top-0 bottom-0 z-50 md:overflow-visible md:sticky md:z-20">
-        <a href="/" class="my-8 relative z-50"><img src="/assets/images/logo.svg" alt="Restaurant Jericho logo" width="300" height="96" class="max-w-48"></a>
+    <header class="flex flex-col items-center overflow-hidden w-full absolute top-0 bottom-0 z-30 md:overflow-visible md:sticky md:z-20">
+        <a href="/" class="my-8 relative z-30"><img src="/assets/images/logo.svg" alt="Restaurant Jericho logo" width="300" height="96" class="max-w-48"></a>
         <button data-toggle data-toggle-fixed aria-controls="mobileNav" class="mobile-nav-toggle relative z-20 md:hidden"><span><span class="sr-only">Toggle Menu</span></span></button>
         <nav class="w-full mobile-nav md:hidden" id="mobileNav" role="navigation">
           <ul class="text-center">
@@ -139,7 +139,7 @@
     <main>
       {{ content }}
     </main>
-    <footer class="container mb-5 {% if page.url == '/food' %} relative -mt-[240px] md:-mt-[140px] z-10 c-grey-dark {% else %} c-beige {% endif %}">
+    <footer class="container mb-5 {% if page.url == '/food' %} relative -mt-[240px] md:-mt-[140px] z-40 c-grey-dark {% else %} c-beige {% endif %}">
       <nav class="mb-5">
         <ul class="social-nav">
           <li>
@@ -158,7 +158,8 @@
       <ul class="flex flex-col md:flex-row md:flex-wrap gap-3 lg:gap-6">
         <li><a href="https://goo.gl/maps/brBhbeBDJh2dLJ6z8" target="_blank" class="link-small">Directions</a></li>
         <li><a href="/terms" class="link-small">Terms and conditions</a></li>
-        <li class="md:order-1">&copy; 2023 Restaurant Jericho</li>
+        <li><a href="/faqs" class="link-small">FAQs</a></li>
+        <li class="md:order-1">&copy; 2025 Restaurant Jericho</li>
       </ul>
     </footer>
   </body>

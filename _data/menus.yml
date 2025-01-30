@@ -1,45 +1,48 @@
 - title: Tasting Menu
-  cost: "£105 per person
+  cost: "£120 per person
 
-  Paired wines: £70
+  Paired wines: £80
 
-  Kitchen Bench: £120 per person"
+  Kitchen Bench: £140 per person"
   courses:
-    - description: "Bramley Apple, Lincolnshire Poacher, Ox Liver"
+    - description: "Lincolnshire Poacher, Bramley"
     - description: "Jericho Charcuterie"
       space: true
-    - description: "I Wish I Was a Ninja Pet Nat Testalonga El Bandito"
+    - description: "La Cave Se Rebiffe, Pet Nat, Frantz Saumon, Loire, 2023"
       type: drink
-    - description: "Asparagus"
-    - description: "Blood Bread, Pancetta"
-    - description: "Chicken Schnitzel"
-    - description: "Lambs Heart"
-    - description: "Farl, Beetroot, Green Strawberry"
+    - description: "Carrot, Sour Cream"
+    - description: "Game Bird Liver"
+    - description: "Partridge Leg, Rhubarb"
+    - description: "Pancetta, Black Garlic"
+    - description: "Liver and Onion"
       space: true
-    - description: "Novas Chardonnay, Casablanca Valley"
+    - description: "&ldquo;Marius Et Simone&rdquo;, Domaine Gaichino, Savoie, 2022"
       type: drink
-    - description: "Our Bread, Our Butters, Vintage Poacher, Honey"
-    - description: "Fennel Salad"
+    - description: "Our Bread, Our Butters, Game Broth, Potted Game"
       space: true
-    - description: "Rózsa Petsovits Rose Weninger, Sopron"
+    - description: "&ldquo;Les Traverses&rdquo;, Domaine De Courbissac, Languedoc, 2021"
       type: drink
-    - description: "Ox Tail Soup, Tomato"
-    - description: "Naked Oats, Oregano, Lincolnshire Poacher 50"
+    - description: "Beet Soup"
+    - description: "Waldorf Salad"
       space: true
-    - description: "Vdf Reynard Rebels, Provence"
+    - description: "Poucet, Chateau Del Ranq, Languedoc, 2023"
       type: drink
-    - description: "Raw Lamb, Lettuce, Asparagus"
-    - description: "Chicken Breast, Kimchi"
+    - description: "Partridge, Carrot Mole"
+    - description: "Mushroom Chawanmushi"
       space: true
-    - description: "Judith Beck Ink, Burgenland"
+    - description: "&ldquo;Abstèmes S'abstenir&rdquo;, Domaine Cosse Maisonneuve, Pyarssac, 2016"
       type: drink
-    - description: "Dry Aged Pork, Buttermilk, Prune, Xo"
-    - description: "Cull Cow Fillet & Onglet, Chilli, Smoked Date"
+    - description: "1 Year Aged Cull Cow, Horseradish"
+    - description: "Woodcock"
       space: true
-    - description: "Whole Crop Silage Ice Cream"
-      space: true
-    - description: "Muscat De Rivesaltes Enfants Sauvages, Roussillon"
+    - description: "&ldquo;Ocrement-dit&rdquo;, Clos Terre Kermès, Cahors, 2020"
       type: drink
-    - description: "Strawberry, Elderflower, White Stilton"
-    - description: "Jersey Royal"
-    - description: "Apple Pasty, White Stilton, Honey"
+    - description: "Mallard, Turnip, Wasabina"
+    - description: "Sika, Blood Pudding, Currants"
+      space: true
+    - description: "Silage Ice Cream"
+      type: drink
+    - description: "This Side up, Cyril Zangss, Normandy, 2022"
+    - description: "Ruby Beetroot"
+    - description: "Rhubarb, Swede Custard"
+    - description: "Eccles Cake, Cropwell Bishop Stilton"

@@ -506,12 +506,16 @@ video {
   right: -1.25rem;
 }
 
-.z-50 {
-  z-index: 50;
+.z-30 {
+  z-index: 30;
 }
 
 .z-20 {
   z-index: 20;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .z-10 {
@@ -1642,8 +1646,8 @@ body {
   .md\:z-20 {
     z-index: 20;
   }
-  .md\:z-50 {
-    z-index: 50;
+  .md\:z-30 {
+    z-index: 30;
   }
   .md\:order-1 {
     order: 1;

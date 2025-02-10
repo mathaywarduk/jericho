@@ -1607,6 +1607,8 @@ p a:hover, p a:focus {
 
 .input {
   flex-grow: 1;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   border-top-left-radius: 0.125rem;
   border-bottom-left-radius: 0.125rem;
   padding: 0.5rem;
@@ -1616,6 +1618,8 @@ p a:hover, p a:focus {
 
 .button {
   cursor: pointer;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   border-top-right-radius: 0.125rem;
   border-bottom-right-radius: 0.125rem;
   padding: 0.5rem;

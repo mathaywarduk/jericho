@@ -4,7 +4,8 @@
     c-grey-dark
     p-2
     font-bold
-    rounded-l-none
+    appearance-none
+    rounded-none
     rounded-r-sm
     transition-all
     duration-500

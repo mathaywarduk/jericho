@@ -17,7 +17,8 @@
   @apply
     p-2
     flex-grow
-    rounded-r-none
+    appearance-none
+    rounded-none
     rounded-l-sm
     br-white
     c-grey-dark

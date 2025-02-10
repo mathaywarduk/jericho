@@ -41,8 +41,9 @@
     - description: "Sika, Blood Pudding, Currants"
       space: true
     - description: "Silage Ice Cream"
-      type: drink
+      space: true
     - description: "This Side up, Cyril Zangss, Normandy, 2022"
+      type: drink
     - description: "Ruby Beetroot"
     - description: "Rhubarb, Swede Custard"
     - description: "Eccles Cake, Cropwell Bishop Stilton"

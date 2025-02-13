@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  "Restaurant Jericho chats to Left Lion about sustainability, ethical farming and kitchen culture"
+title:  "Restaurant Jericho chat to LeftLion about sustainability and kitchen culture"
 hero:
-    text: "Restaurant Jericho chats to Left Lion about sustainability, ethical farming and kitchen culture"
+    text: "Restaurant Jericho chat to LeftLion about sustainability and kitchen culture"
     image:
-        url: Jericho-Timmy-23.jpeg
+        url: Jericho_009.jpg
         alt: "Lincolnshire Poacher, Bramley"
-        ar: "3:4"
+        ar: "4:3"
     align: left
 seo:
-  title: "Restaurant Jericho chats to Left Lion about sustainability, ethical farming and kitchen culture"
-  description:
-  image:
-    url: 
-    alt:
+  title: "Restaurant Jericho chat to LeftLion about sustainability and kitchen culture"
+  description: "Recently, Rich sat down with Julia Head of Nottingham's iconic LeftLion magazine to share the story behind Restaurant Jericho."
+  image: 
+    url: Jericho_002.jpg
+    alt: "A table setting at Restaurant Jericho"
 ---
 
 Recently, Rich sat down with Julia Head of Nottingham's iconic [*LeftLion*](https://leftlion.co.uk/) magazine to share the story behind Restaurant Jericho.

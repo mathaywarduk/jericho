@@ -4,9 +4,15 @@ layout: default
 
 {% assign hero = page.hero %}
 
+<div class="container pt-12">
+  <a href="/blog" class="inline-flex items-center transition-all duration-300 ease-in-out hover:c-orange focus:c-orange hover:underline focus:underline">
+  <span class="rotate-180 inline-block">{% include chevron.html %}</span>
+  Back to blog</a>
+</div>
+
 {% if hero %}
   <!-- START: Hero -->
-  {% assign heroClasses = "hero-image hero-image--" | append:hero.image.ar  %}
+  {% assign heroClasses = "hero-image"  %}
   {% assign blockClasses = "flex justify-center" %}
   <section class="relative z-10 mt-[175px]
     md:mt-8
@@ -20,7 +26,7 @@ layout: default
       md:-mt-24
       lg:mt-0 lg:no-container lg:col-span-7 lg:row-span-full lg:self-end
       xl:col-span-8
-      {% if hero.align == 'left' %} lg:col-start-1 lg:col-end-8d xl:col-end-9 {% else %} lg:col-start-6 xl:col-start-5 {% endif %}">
+      {% if hero.align == 'left' %} lg:col-start-1 lg:col-end-8 xl:col-end-9 {% else %} lg:col-start-6 xl:col-start-5 {% endif %}">
       <h1 class="h1 md:text-3xl xl:max-w-7/12">{{ hero.text | widont }}</h1>
       <timedate class="font-type text-md">{{ page.date | date: "%B %Y" }}</timedate>
     </div>
@@ -31,7 +37,7 @@ layout: default
 
 
 {% if content %}
-  <section class="my-12 lg:my-24">
+  <section class="my-12 lg:my-24 pb-24">
     <div class="container">
       <div class="prose">
         {{ content }}

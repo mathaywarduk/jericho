@@ -11,10 +11,7 @@
   @apply
     text-base
     md:text-lg
-    leading-tight
     max-w-prose
-    mb-8
-    md:mb-12
   ;
 }
 
@@ -22,10 +19,7 @@
   @apply
     text-sm
     md:text-md
-    leading-tight
     max-w-prose
-    mb-8
-    md:mb-12
   ;
 }
 
@@ -50,5 +44,32 @@
   @apply
     -mt-4
     md:-mt-8;
+  ;
+}
+
+.prose blockquote {
+ @apply
+    pl-4
+    border-l-2
+    br-orange
+    mb-12
+  ; 
+}
+
+.prose blockquote p {
+  @apply
+    text-lg
+    font-headings
+    mb-4
+  ;
+}
+
+.prose blockquote cite {
+  @apply
+    text-sm
+    font-sans
+    uppercase
+    font-normal
+    not-italic
   ;
 }

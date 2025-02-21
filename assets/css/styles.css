@@ -796,6 +796,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .object-cover {
   -o-object-fit: cover;
   object-fit: cover;
@@ -1263,6 +1267,8 @@ a.link-small:focus {
   bottom: 0px;
   left: 100%;
   z-index: 20;
+  max-height: 100vh;
+  overflow: auto;
   padding-top: 175px;
   transition-property: all;
   transition-duration: 300ms;

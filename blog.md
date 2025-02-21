@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="container mt-[200px] md:mt-24">
+<div class="container">
   <h1 class="xl:max-w-7/12">The latest news from our team.</h1>
 </div>
 
@@ -18,7 +18,7 @@ layout: default
         {% include image.html url=hero.image.url alt=hero.image.alt fit="crop" lazy="false" width="820" height="547" block_classes="flex justify-center" classes="hero-image" ar="4:3" lgar="4:3" %}
       </a>
     </div>
-    <div class="container -mt-9 md:-mt-16 relative z-30
+    <div class="container -mt-9 md:-mt-16 relative z-10
         lg:mt-0 lg:no-container lg:col-span-7 lg:row-span-full lg:self-end
         xl:col-span-8 lg:col-start-1 lg:col-end-8 xl:col-end-9">
       <timedate class="font-type lg:text-md mb-2">{{ post.date | date: "%B %Y" }}</timedate>

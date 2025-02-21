@@ -92,9 +92,9 @@
     </script>
   </head>
   <body class="{{ page.bodyClass }}">
-    <header class="flex flex-col items-center overflow-hidden w-full absolute top-0 bottom-0 z-30 md:overflow-visible md:sticky md:z-20 md:bottom-auto">
+    <header class="flex flex-col items-center overflow-hidden w-full md:absolute md:top-0 md:overflow-visible md:sticky md:z-20 md:bottom-auto">
         <a href="/" class="my-8 relative z-30"><img src="/assets/images/logo.svg" alt="Restaurant Jericho logo" width="300" height="96" class="max-w-48"></a>
-        <button data-toggle data-toggle-fixed aria-controls="mobileNav" class="mobile-nav-toggle relative z-20 md:hidden"><span><span class="sr-only">Toggle Menu</span></span></button>
+        <button data-toggle data-toggle-fixed aria-controls="mobileNav" class="mobile-nav-toggle relative z-30 md:hidden"><span><span class="sr-only">Toggle Menu</span></span></button>
         <nav class="w-full mobile-nav md:hidden" id="mobileNav" role="navigation">
           <ul class="text-center">
             {% for nav_item in site.data.nav %}
@@ -133,7 +133,7 @@
           </ul>
         </nav>
     </header>
-    <main{% if page.url != "/" %} class="mt-[175px] md:mt-8 lg:mt-0"{% endif %}>
+    <main{% if page.url != "/" %} class="mt-4 md:mt-8 lg:mt-0"{% endif %}>
       {{ content }}
     </main>
     <footer class="container mb-5 {% if page.url == '/food' %} relative -mt-[240px] md:-mt-[140px] z-40 c-grey-dark {% else %} c-beige {% endif %}">

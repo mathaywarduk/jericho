@@ -4,7 +4,7 @@ title: "Michelin Guide Ceremony 2025 - Restaurant Jericho awarded Green Star"
 hero:
     text: "Michelin Guide Ceremony 2025 - Restaurant Jericho awarded Green Star"
     image:
-        url: Jericho-Timmy-23.jpeg
+        url: Michelin-stage.jpg
         alt: "Lincolnshire Poacher, Bramley"
         ar: "3:4"
     align: left
@@ -17,6 +17,9 @@ seo:
 ---
 
 We’re thrilled to announce that Jericho were awarded the prestigious [Michelin Green Star](https://guide.michelin.com/gb/en/article/features/what-is-the-michelin-green-star-and-how-do-you-earn-one) at the The [Michelin Guide](https://guide.michelin.com/gb/en) Ceremony.
+
+
+![Rich and Grace at the MICHELIN Ceremony 20](https://jericho.imgix.net/Michelin-2025.jpg?w=1400&fit=crop&ar=4:5 "Rich and Grace at the MICHELIN Ceremony 2025")
 
 Green Stars are given for outstanding commitment to a more sustainable approach to gastronomy, highlighting our dedication to sourcing local, seasonal ingredients to minimizing food waste.
 

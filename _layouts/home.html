@@ -5,9 +5,10 @@ layout: default
 {% assign contentBlock = page.body.content-block %}
 {% assign cta = page.body.call-to-action %}
 
-<div class="w-full h-screen-plus home-hero top-0">
+<div class="w-full h-screen-plus home-hero top-0 relative">
   {% include image.html url=page.hero.image.url alt=page.hero.image.alt fit="crop" ar="9:16" lgar="16:9" lazy="false" width="100%" height="100%" block_classes="h-full w-full absolute z-10" classes="object-cover h-full w-full" %}
 </div>
+  <div class="absolute bottom-5 right-5 z-20">{% include green-star.html %}</div>
 
 <div class="home-content">
   <!-- START: Feature -->

@@ -1,10 +1,10 @@
 ---
 layout: home
-title:  "Fine dining in the Vale of Belvoir"
+title:  "Michelin Green Star restaurant in the Vale of Belvoir"
 bodyClass: bg-leaf-blue
 hero:
     image:
-        url: Jericho_002.jpg
+        url: hero2.jpg
         alt: "A table setting at Restaurant Jericho"
 body:
     feature:
@@ -24,16 +24,16 @@ body:
             path: "/food"
         images:
             - url: Jericho-Timmy-11.jpeg
-              alt: "Restaurant Jericho exterior"
+              alt: "Sileage ice cream"
               ar: "4:6"
             - url: Jericho_0012.jpg
-              alt: "Restaurant Jericho exterior"
+              alt: "Crispy pork fat"
               ar: "6:4"
             - url: Jericho-Timmy-14.jpeg
-              alt: "Restaurant Jericho exterior"
+              alt: "Lamb chorizo"
               ar: "4:6"
             - url: Jericho-Timmy-21.jpeg
-              alt: "Chef Richard Stevens in the kitchen garden"
+              alt: "Tartare"
               ar: "4:6"
     call-to-action:
         title: Gift vouchers
@@ -43,7 +43,7 @@ body:
             path: "https://restaurantjericho.sumupstore.com/"
             target: "_blank"
 seo:
-    title: "Fine dining in the Vale of Belvoir"
+    title: "Michelin Green Star restaurant in the Vale of Belvoir"
     description: "Rooted by working the land, Restaurant Jericho shares a dining experience at our farm inspired by humble ingredients and the most honest way to cook, fire."
     image:
         url: Jericho_002.jpg

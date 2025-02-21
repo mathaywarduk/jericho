@@ -1,7 +1,7 @@
 {% if include.hero == "true" %}
-  {% capture opts %}&fp-x=0.4&fp-y=0.7&crop=focalpoint&fit=crop{% endcapture %}
+  {% capture opts %}&fp-x=0.4&fp-y=0.7&crop=edges&fit=crop{% endcapture %}
 {% else %}
-  {% capture opts %}&fit=crop{% endcapture %}
+  {% capture opts %}&fit=crop&crop=edges{% endcapture %}
 {% endif %}
 
 

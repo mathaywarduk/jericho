@@ -92,7 +92,7 @@
     </script>
   </head>
   <body class="{{ page.bodyClass }}">
-    <header class="flex flex-col items-center overflow-hidden w-full absolute top-0 z-30 md:overflow-visible md:sticky md:z-20">
+    <header class="flex flex-col items-center overflow-hidden w-full absolute top-0 bottom-0 z-30 md:overflow-visible md:sticky md:z-20 md:bottom-auto">
         <a href="/" class="my-8 relative z-30"><img src="/assets/images/logo.svg" alt="Restaurant Jericho logo" width="300" height="96" class="max-w-48"></a>
         <button data-toggle data-toggle-fixed aria-controls="mobileNav" class="mobile-nav-toggle relative z-20 md:hidden"><span><span class="sr-only">Toggle Menu</span></span></button>
         <nav class="w-full mobile-nav md:hidden" id="mobileNav" role="navigation">
@@ -133,7 +133,7 @@
           </ul>
         </nav>
     </header>
-    <main>
+    <main{% if page.url != "/" %} class="mt-[175px] md:mt-8 lg:mt-0"{% endif %}>
       {{ content }}
     </main>
     <footer class="container mb-5 {% if page.url == '/food' %} relative -mt-[240px] md:-mt-[140px] z-40 c-grey-dark {% else %} c-beige {% endif %}">
@@ -145,9 +145,11 @@
           <li>
             <a href="https://www.facebook.com/restaurantjericho" target="_blank" class="hover:opacity-80 focus:opacity-80 transition-all duration-200 ease-in-out" title="Follow Restaurant Jericho on Instagram">{% include facebook.html %}<span class="sr-only">Facebook</span></a>
           </li>
+          {% if page.url != "/" %}
           <li class="ml-5">
-            <a href="https://guide.michelin.com/kr/en/leicestershire/plungar_7770413/restaurant/jericho" target="_blank" class="hover:opacity-80 focus:opacity-80 transition-all duration-200 ease-in-out" title="MICHELIN Green Star - 2025">{% include green-star.html %}<span class="sr-only">MICHELIN Green Star restaurant</span></a>
+            <a href="https://guide.michelin.com/kr/en/leicestershire/plungar_7770413/restaurant/jericho" target="_blank" class="hover:opacity-80 focus:opacity-80 transition-all duration-200 ease-in-out" title="Michelin Green Star - 2025">{% include green-star.html %}<span class="sr-only">Michelin Green Star restaurant</span></a>
           </li>
+          {% endif %}
         </ul>
       </nav>
       <ul class="flex flex-col md:flex-row md:flex-wrap gap-3 lg:gap-6 mb-3 lg:mb-5">

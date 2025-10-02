@@ -1616,7 +1616,23 @@ p.p-large {
     font-size: 2rem;
   }
 }
-p a {
+.content-block ul {
+  margin-bottom: 3rem;
+  list-style-position: outside;
+  list-style-type: disc;
+  padding-left: 1rem;
+  font-size: 1.375rem;
+  font-weight: 200;
+  font-variation-settings: "opsz" 1000, "wght" 200;
+}
+
+@media (min-width: 768px) {
+  .content-block ul {
+    font-size: 1.6875rem;
+  }
+}
+p a,
+.content-block li a {
   position: relative;
   display: inline-block;
   text-decoration-line: underline;
@@ -1624,7 +1640,9 @@ p a {
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-p a:hover, p a:focus {
+p a:hover, p a:focus,
+.content-block li a:hover,
+.content-block li a:focus {
   color: var(--orange);
 }
 

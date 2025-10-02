@@ -5,45 +5,45 @@
 
   Kitchen Bench: £140 per person"
   courses:
-    - description: "Lincolnshire Poacher, Bramley"
+    - description: "Artichoke, White Stilton, Damson"
     - description: "Jericho Charcuterie"
       space: true
-    - description: "La Cave Se Rebiffe, Pet Nat, Frantz Saumon, Loire, 2023"
+    - description: "'Dans Ma Bulle', Les Enfants Sauvage, Cotes Catalanes, 2021"
       type: drink
-    - description: "Carrot, Sour Cream"
-    - description: "Game Bird Liver"
-    - description: "Partridge Leg, Rhubarb"
-    - description: "Pancetta, Black Garlic"
-    - description: "Liver and Onion"
+    - description: "Lincolnshire Poacher Churros"
+    - description: "Pigs Blood Tart"
+    - description: "Chicken Leg"
+    - description: "Lamb, Blackberry"
+    - description: "Duck Leg Croquette"
       space: true
-    - description: "&ldquo;Marius Et Simone&rdquo;, Domaine Gaichino, Savoie, 2022"
+    - description: "Patchwork, La Cuverie, Savoie, 2023"
       type: drink
-    - description: "Our Bread, Our Butters, Game Broth, Potted Game"
+    - description: "Our Bread, Our Butter"
       space: true
-    - description: "&ldquo;Les Traverses&rdquo;, Domaine De Courbissac, Languedoc, 2021"
+    - description: "'Keep on Pushing', Baby Bandito, Testalonga, Swartland, 2022"
       type: drink
-    - description: "Beet Soup"
-    - description: "Waldorf Salad"
+    - description: "Celeriac, Celery, Apple"
+    - description: "Todays Cheese, Leek, Red Onion"
       space: true
-    - description: "Poucet, Chateau Del Ranq, Languedoc, 2023"
+    - description: "'Cool Moon' Les Enfants Sauvage, Cotes Catalanes, 2021"
       type: drink
-    - description: "Partridge, Carrot Mole"
-    - description: "Mushroom Chawanmushi"
+    - description: "Garden Herb Chawanmushi, Ox Liver Bushi"
+    - description: "Squash, Naked Oats, Lincolnshire Poacher 50"
       space: true
-    - description: "&ldquo;Abstèmes S'abstenir&rdquo;, Domaine Cosse Maisonneuve, Pyarssac, 2016"
+    - description: "Blaufränkisch, Judith Beck, Burgenland, 2023"
       type: drink
-    - description: "1 Year Aged Cull Cow, Horseradish"
-    - description: "Woodcock"
+    - description: "100 Day Old Chicken,Tenderstem, Chicken Liver"
+    - description: "Lamb, Date, Turnip"
       space: true
-    - description: "&ldquo;Ocrement-dit&rdquo;, Clos Terre Kermès, Cahors, 2020"
+    - description: "'Absteme S`abstenir',Cosse Maisonneuve,Cahors, 2018"
       type: drink
-    - description: "Mallard, Turnip, Wasabina"
-    - description: "Sika, Blood Pudding, Currants"
+    - description: "Pork, Beetroot, Bramley Apple"
+    - description: "Botterill's Duck, Fig"
       space: true
     - description: "Silage Ice Cream"
       space: true
-    - description: "This Side up, Cyril Zangss, Normandy, 2022"
+    - description: "'Blet Tendre', Les Terres Blanches, Oiron, 2021"
       type: drink
-    - description: "Ruby Beetroot"
-    - description: "Rhubarb, Swede Custard"
-    - description: "Eccles Cake, Cropwell Bishop Stilton"
+    - description: "Apple, Crown Prince Squash, Caramel"
+    - description: "Parsnip, Hazelnut, Molasses"
+    - description: "Stilton Creme Brûlée"

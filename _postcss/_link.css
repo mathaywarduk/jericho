@@ -135,7 +135,8 @@
 
 
 
-p a {
+p a,
+.content-block li a {
   @apply
     underline
     relative

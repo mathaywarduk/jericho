@@ -65,3 +65,19 @@ p.p-large {
   ;
 }
 
+.content-block ul {
+  @apply
+    list-disc
+    list-outside
+    pl-4
+    text-md
+    md:text-lg
+    font-extralight
+    mb-12
+  ;
+}
+
+.content-block li {
+  
+}
+

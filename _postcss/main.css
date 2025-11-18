@@ -22,3 +22,8 @@ body {
     font-light
   ;
 }
+
+:root, html, body {
+    position: relative;
+    overflow-x: hidden;
+}

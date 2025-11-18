@@ -796,10 +796,6 @@ video {
   overflow: hidden;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
 .object-cover {
   -o-object-fit: cover;
   object-fit: cover;
@@ -1865,6 +1861,11 @@ body {
   color: var(--beige);
   background-color: var(--green-dark);
   font-variation-settings: "opsz" 1000, "wght" 300;
+}
+
+:root, html, body {
+  position: relative;
+  overflow-x: hidden;
 }
 
 .hover\:underline:hover {

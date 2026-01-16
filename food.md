@@ -28,7 +28,7 @@ body:
             Join us in our main dining room or book the kitchen&nbsp;bench. 
 
 
-            Dinner at £120 per person
+            Dinner at £140 per person
 
 
             Wine Flight at £80 per person
@@ -50,7 +50,7 @@ body:
           text: "A great way to sample our cuisine. An evening of experimental dishes and techniques making their way onto out 20 course menu.
 
 
-          8ish courses of new ideas that haven’t been plated before for you to enjoy and give feedback on. A very chilled vibe at £40 per head. Please come straight into the  restaurant on arrival."
+          8ish courses of new ideas that haven’t been plated before for you to enjoy and give feedback on. A very chilled vibe at £50 per head. Please come straight into the  restaurant on arrival."
           images:
             - url: Jericho_003.jpg
               alt: "Jericho Charcuterie"

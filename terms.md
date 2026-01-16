@@ -20,7 +20,7 @@ Our restaurant is an intimate setting; the largest table we can accommodate for 
 We ask for a **non-refundable** deposit of £50 per guest for a dining reservation. This is fully
 redeemable against your bill and will automatically be deducted on the day.
 
-We require 72 hours’ notice in writing for any cancellations or modifications for all reservations. Should you cancel within the 72 hour cancellation period, a full £120 per head will be charged..
+We require 72 hours’ notice in writing for any cancellations or modifications for all reservations. Should you cancel within the 72 hour cancellation period, a full £140 per head will be charged.
 
 All bills are inclusive of a discretionary 12.5% service charge.
 
@@ -28,7 +28,7 @@ All bills are inclusive of a discretionary 12.5% service charge.
 
 We do not offer the kitchen Bench on a WIP evening and no Wine flight is available.
 
-We request a payment of £40 per person upon booking, this is **non-refundable** but can be
+We request a payment of £50 per person upon booking, this is **non-refundable** but can be
 transferred to another date or name.
 
 Due to the nature of the evening, we do not cater to Vegans, Vegetarians, Pescatarians or

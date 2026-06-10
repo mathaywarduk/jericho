@@ -873,6 +873,10 @@ video {
   font-size: 1.125rem;
 }
 
+.text-sm {
+  font-size: 1rem;
+}
+
 .font-extralight {
   font-weight: 200;
 }

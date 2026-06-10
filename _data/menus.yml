@@ -1,9 +1,10 @@
 - title: Tasting Menu
-  cost: "£156 per person
+  cost: "£130 per person
 
-  Paired wines: £96
+  Paired wines: £80
 
-  Kitchen Bench: £180 per person"
+  Kitchen Bench: £150 per person"
+  disclaimer: "All our prices are exclusive of VAT"
   courses:
     - description: "Artichoke, White Stilton, Damson"
     - description: "Jericho Charcuterie"

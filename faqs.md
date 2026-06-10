@@ -52,7 +52,7 @@ If you are making a group booking, it is your responsibility to make us aware of
 
 ## Can I cancel or modify my booking?
 
-Yes, as long as we have at least 72 hours’ notice. Your £50 deposit is **non-refundable**. If there are any cancellations or amendments to bookings (in part or whole) with less than 72 hours notice, a full £156pp dinner fee will be charged (Your deposit will be included in this amount). This charge reflects the cost of food, drink and staffing incurred with short-notice changes.
+Yes, as long as we have at least 72 hours’ notice. Your £50 deposit is **non-refundable**. If there are any cancellations or amendments to bookings (in part or whole) with less than 72 hours notice, a full £130pp dinner fee will be charged (Your deposit will be included in this amount). This charge reflects the cost of food, drink and staffing incurred with short-notice changes.
 
 Please see our [Terms and Conditions](/terms).
 

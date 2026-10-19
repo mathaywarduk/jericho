@@ -13,7 +13,7 @@
   {% capture srcset %}{% for width in widths %}{% assign w = width | plus: 0 %}{% if w >= 1280 and lgar != "" %}{% assign ratio = lgar %}{% else %}{% assign ratio = ar %}{% endif %}{% assign h = "" %}{% if ratio != "" %}{% assign parts = ratio | split: ":" %}{% assign h = w | times: parts[1] | divided_by: parts[0] %}{% endif %}/.netlify/images?url={{ include.url | url_encode }}&w={{ w }}{% if h != "" %}&h={{ h }}&fit=cover{% endif %} {{ w }}w{% unless forloop.last %},
     {% endunless %}{% endfor %}{% endcapture %}
 <picture class="{{ include.block_classes }}">
-  <img src="/.netlify/images?url={{ include.url | url_encode }}&w=10&q=30" alt="{{ include.alt }}" {% if include.lazy == "true" %}loading="lazy"{% endif %} sizes="{% if sizes %}{{ sizes }}{% else %}(max-width: 2560px) 100vw, 2560px{% endif %}" width="{{ include.width }}" height="{{ include.height }}" class="{{ include.classes }}"
+  <img src="/.netlify/images?url={{ include.url | url_encode }}&w=10&q=30" alt="{{ include.alt }}" {% if include.lazy == "true" %}loading="lazy"{% endif %}{% if include.priority == "high" %} fetchpriority="high"{% endif %} sizes="{{ include.sizes | default: '100vw' }}" width="{{ include.width }}" height="{{ include.height }}" class="{{ include.classes }}"
     srcset="{{ srcset }}">
 </picture>
 {% else %}
@@ -31,7 +31,7 @@
 
 
 <picture class="{{ include.block_classes }}">
-  <img src="{{ site.image_base }}{{ include.url }}?w=10&q=30{{opts}}" alt="{{ include.alt }}" {% if include.lazy == "true" %}loading="lazy"{% endif %} sizes="{% if sizes %}{{ sizes }}{% else %}(max-width: 2560px) 100vw, 2560px{% endif %}" width="{{ include.width }}" height="{{ include.height }}" class="{{ include.classes }}"
+  <img src="{{ site.image_base }}{{ include.url }}?w=10&q=30{{opts}}" alt="{{ include.alt }}" {% if include.lazy == "true" %}loading="lazy"{% endif %}{% if include.priority == "high" %} fetchpriority="high"{% endif %} sizes="{{ include.sizes | default: '100vw' }}" width="{{ include.width }}" height="{{ include.height }}" class="{{ include.classes }}"
     srcset="{{ site.image_base }}{{ include.url }}?w=2560{{opts}}{% if include.lgar %}&ar={{ lgar }}{% elsif include.ar %}&ar={{ ar }}{% endif %} 2560w,
     {{ site.image_base }}{{ include.url }}?w=1920{{opts}}{% if include.lgar %}&ar={{ lgar }}{% elsif include.ar %}&ar={{ ar }}{% endif %} 1920w,
     {{ site.image_base }}{{ include.url }}?w=1600{{opts}}{% if include.lgar %}&ar={{ lgar }}{% elsif include.ar %}&ar={{ ar }}{% endif %} 1600w,

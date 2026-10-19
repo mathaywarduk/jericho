@@ -16,7 +16,7 @@ layout: default
     xl:pb-8">
     <div class="pt-5 lg:pt-0 lg:col-span-7 lg:row-span-full xl:col-span-6
     {% if hero.align == 'left' %} lg:col-start-6 lg:self-end xl:col-start-7 xl:-ml-12 xl:pr-12 {% else %} lg:col-start-1 lg:col-end-8 lg:self-start xl:col-end-7 {% endif %}">
-      {% include image.html url=hero.image.url alt=hero.image.alt fit="crop" lazy="false" width="820" height="547" block_classes=blockClasses classes=heroClasses ar="4:3" lgar=hero.image.ar %}
+      {% include image.html url=hero.image.url alt=hero.image.alt fit="crop" lazy="false" priority="high" sizes="(min-width: 1024px) 50vw, 100vw" width="820" height="547" block_classes=blockClasses classes=heroClasses ar="4:3" lgar=hero.image.ar %}
     </div>
     <div class="container -mt-12 relative z-20
       md:-mt-24
@@ -51,7 +51,7 @@ layout: default
         {% assign imageHeight = 700 %}
       {% endif %}
 
-      {% include image.html url=image.url alt=image.alt fit="crop" lazy="true" width=imageWidth height=imageHeight  block_classes=blockClasses classes="" %}
+      {% include image.html url=image.url alt=image.alt fit="crop" lazy="true" sizes="(min-width: 1024px) 25vw, 50vw" width=imageWidth height=imageHeight  block_classes=blockClasses classes="" %}
     {% endfor %}
   </div>
   {% endif %}
@@ -73,12 +73,14 @@ layout: default
           {% assign width = 145 %}
           {% assign height = 218 %}
           {% assign blockClass = "w-[145px] h-[218px] sm:w-[190px] sm:h-[285px] md:w-[340px] md:h-[510px] lg:w-[536px] lg:h-[805px] shrink-0 object-cover" %}
+          {% assign imageSizes = "(min-width: 1024px) 536px, (min-width: 768px) 340px, (min-width: 375px) 190px, 145px" %}
         {% else %}
           {% assign width = 218 %}
           {% assign height = 145 %}
           {% assign blockClass = "h-[145px] w-[218px] sm:h-[190px] sm:w-[285px] md:h-[340px] md:w-[510px] lg:h-[536px] lg:w-[805px] shrink-0" %}
+          {% assign imageSizes = "(min-width: 1024px) 805px, (min-width: 768px) 510px, (min-width: 375px) 285px, 218px" %}
         {% endif %}
-          {% include image.html url=image.url alt=image.alt ar=image.ar fit="crop" lazy="true" width=width height=height block_classes=blockClass classes="w-full h-full object-cover" %}
+          {% include image.html url=image.url alt=image.alt ar=image.ar fit="crop" lazy="true" sizes=imageSizes width=width height=height block_classes=blockClass classes="w-full h-full object-cover" %}
         {% endfor %}
       </div>
     </div>
@@ -107,13 +109,15 @@ layout: default
           {% assign imageWidth = 700 %}
           {% assign imageHeight = 1000 %}
           {% assign blockClasses = "w-7/12 shrink-0 -ml-6 md:-ml-12 lg:w-1/4 " | append: imagePosition %}
+          {% assign imageSizes = "(min-width: 1024px) 25vw, 58vw" %}
         {% else %}
           {% assign imageWidth = 1000 %}
           {% assign imageHeight = 700 %}
           {% assign blockClasses = "w-2/5 shrink-0 lg:w-1/4 xl:w-1/3" | append: imageOrder %}
+          {% assign imageSizes = "(min-width: 1280px) 33vw, (min-width: 1024px) 25vw, 40vw" %}
         {% endif %}
 
-        {% include image.html url=image.url alt=image.alt fit="crop" lazy="true" width=imageWidth height=imageHeight  block_classes=blockClasses classes="" %}
+        {% include image.html url=image.url alt=image.alt fit="crop" lazy="true" sizes=imageSizes width=imageWidth height=imageHeight  block_classes=blockClasses classes="" %}
       {% endfor %}
 
     <div class="container order-1 lg:order-2">

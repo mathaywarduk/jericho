@@ -1,5 +1,8 @@
 ---
 layout: default
+title: "Blog"
+seo:
+  description: "News from Restaurant Jericho, a Michelin Green Star restaurant on a family farm in the Vale of Belvoir."
 ---
 
 <div class="container">
@@ -14,7 +17,7 @@ layout: default
     <div class="lg:col-span-7 lg:row-span-full xl:col-span-6
       lg:col-start-6 lg:self-end xl:col-start-7 xl:-ml-12 xl:pr-12">
       <a href="{{ post.url }}">
-        {% include image.html url=post.image alt=post.image_alt fit="crop" lazy="false" width="820" height="547" block_classes="flex justify-center" classes="hero-image" ar="4:3" lgar="4:3" %}
+        {% include image.html url=post.image alt=post.image_alt fit="crop" lazy="false" priority="high" sizes="(min-width: 1024px) 50vw, 100vw" width="820" height="547" block_classes="flex justify-center" classes="hero-image" ar="4:3" lgar="4:3" %}
       </a>
     </div>
     <div class="container -mt-9 md:-mt-16 relative z-10
@@ -35,7 +38,7 @@ layout: default
           <div class="max-w-96 ml-auto smmd:col-span-7 smmd:row-span-full xl:col-span-6
             smmd:col-start-6 smmd:self-end xl:col-start-7 xl:-ml-12 xl:pr-12">
             <a href="{{ post.url }}">
-              {% include image.html url=post.image alt=post.image_alt fit="crop" lazy="false" width="820" height="547" block_classes="flex justify-center" classes="hero-image" ar="4:3" lgar="4:3" %}
+              {% include image.html url=post.image alt=post.image_alt fit="crop" lazy="true" sizes="(min-width: 600px) 50vw, 384px" width="820" height="547" block_classes="flex justify-center" classes="hero-image" ar="4:3" lgar="4:3" %}
             </a>
           </div>
           <div class="container -mt-9 relative z-30 

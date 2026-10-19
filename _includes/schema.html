@@ -1,0 +1,75 @@
+{% comment %}
+  schema.org structured data. Every value goes through jsonify so quotes and
+  line breaks in titles or descriptions can't break the JSON.
+
+  Opening hours follow the FAQs: WIP evenings Wed and Thu from 7pm (finish
+  around 9.30pm); tasting menu Fri and Sat, bar from 6.30pm (finish around 11pm).
+{% endcomment %}
+{%- assign restaurant_id = site.url | append: "/#restaurant" -%}
+{%- assign menu_url = site.url | append: "/food" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Restaurant",
+      "@id": {{ restaurant_id | jsonify }},
+      "name": "Restaurant Jericho",
+      "url": {{ site.url | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "image": [
+        "{{ site.image_base }}hero2.jpg?w=1200",
+        "{{ site.image_base }}Jericho_008.jpg?w=1200",
+        "{{ site.image_base }}Jericho_0031.jpg?w=1200",
+        "{{ site.image_base }}Jericho-Timmy-23.jpeg?w=1200"
+      ],
+      "email": {{ site.data.site_text.email | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Orchard Farm",
+        "addressLocality": "Plungar",
+        "postalCode": "NG13 0JA",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.898150,
+        "longitude": -0.859690
+      },
+      "servesCuisine": "Fine Dining",
+      "priceRange": "£££",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Wednesday", "Thursday"],
+          "opens": "19:00",
+          "closes": "21:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "18:30",
+          "closes": "23:00"
+        }
+      ],
+      "hasMenu": {{ menu_url | jsonify }},
+      "acceptsReservations": {{ site.data.site_text.reservations_url | jsonify }},
+      "award": ["Michelin Green Star", "The Sunday Times best restaurant of 2024"],
+      "sameAs": {{ site.same_as | jsonify }}
+    }
+    {%- if page.collection == "posts" %},
+    {
+      "@type": "BlogPosting",
+      "headline": {{ page.title | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+      "description": {{ include.description | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "image": {{ include.image | jsonify }},
+      "author": {"@id": {{ restaurant_id | jsonify }}},
+      "publisher": {"@id": {{ restaurant_id | jsonify }}}
+    }
+    {%- endif %}
+  ]
+}
+</script>

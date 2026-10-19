@@ -1,5 +1,11 @@
 url: "https://restaurantjericho.com" # the base hostname & protocol for your site, e.g. http://example.com
 title: "Restaurant Jericho" # the name of your site, e.g. ACME Corp.
+description: "Michelin Green Star restaurant in the Vale of Belvoir. Rooted by working the land, Restaurant Jericho shares a dining experience at our farm inspired by humble ingredients and the most honest way to cook, fire."
+# The restaurant's other profiles, for search engines (schema.org sameAs)
+same_as:
+  - https://www.instagram.com/restaurantjericho
+  - https://www.facebook.com/restaurantjericho
+  - https://guide.michelin.com/kr/en/leicestershire/plungar_7770413/restaurant/jericho
 permalink: /blog/:title
 plugins:
   - jekyll-postcss

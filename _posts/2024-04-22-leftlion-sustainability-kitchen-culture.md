@@ -2,7 +2,7 @@
 layout: post
 title:  "Restaurant Jericho chat to LeftLion about sustainability and kitchen culture"
 image: /assets/images/uploads/Jericho_009.jpg
-image_alt: "Lincolnshire Poacher, Bramley"
+image_alt: "Two Restaurant Jericho chefs in the kitchen"
 image_shape: "4x3"
 seo:
   title: "Restaurant Jericho chat to LeftLion about sustainability and kitchen culture"

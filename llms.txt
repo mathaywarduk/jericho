@@ -1,0 +1,31 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+Restaurant Jericho is run by chef Richard Stevens and Grace on the family farm at Orchard Farm, Plungar, NG13 0JA, in the Vale of Belvoir. It holds a Michelin Green Star.
+
+## Visiting
+
+- Evening tasting menu: Friday and Saturday evenings at 7pm, with the bar open from 6.30pm.
+- Work in Progress (WIP) evenings: Wednesday and Thursday at 7pm, finishing around 9.30pm.
+- Prices: {{ site.data.menu.prices | newline_to_br | strip_newlines | replace: "<br />", "; " }}{% if site.data.menu.small_print and site.data.menu.small_print != "" %} ({{ site.data.menu.small_print }}){% endif %}
+- Booking: {{ site.data.site_text.reservations_url }}
+- Email: {{ site.data.site_text.email }}
+
+## Pages
+
+- [Our Food]({{ site.url }}/food): the evening tasting menu, WIP evenings and a sample menu
+- [History]({{ site.url }}/history): the farm and how the restaurant started
+- [FAQs]({{ site.url }}/faqs): opening times, parking, places to stay, dietary requirements and cancellations
+- [Booking terms]({{ site.url }}/terms)
+- [Gift vouchers](https://restaurantjericho.sumupstore.com/)
+
+## News
+
+{% for post in site.posts -%}
+- [{{ post.title }}]({{ site.url }}{{ post.url }}) ({{ post.date | date: "%B %Y" }})
+{% endfor %}

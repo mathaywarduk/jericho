@@ -2,6 +2,7 @@
 layout: page
 seo:
     title: "Booking terms"
+    description: "Booking terms for Restaurant Jericho's evening tasting menu and Work in Progress evenings, including deposits, cancellations and dietary requirements."
     image:
         url: Jericho_0014.jpg
         alt: "Halibut, Kohlrabi and fish roe"

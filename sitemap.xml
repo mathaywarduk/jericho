@@ -1,29 +1,15 @@
 ---
 layout: null
+permalink: /sitemap.xml
 ---
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-      <loc>{{ site.url }}</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    <url>
-      <loc>{{ site.url }}/food</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    <url>
-      <loc>{{ site.url }}/history</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    <url>
-      <loc>{{ site.url }}/terms</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.1</priority>
-    </url>
+{%- comment %} Every page that isn't marked noindex, then every blog post {% endcomment %}
+{%- assign pages = site.html_pages | where_exp: "p", "p.noindex != true" %}
+{%- for p in pages %}
+  <url><loc>{{ site.url }}{{ p.url | replace: "index.html", "" }}</loc></url>
+{%- endfor %}
+{%- for post in site.posts %}
+  <url><loc>{{ site.url }}{{ post.url }}</loc><lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod></url>
+{%- endfor %}
 </urlset>

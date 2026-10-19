@@ -2,6 +2,7 @@
 layout: page
 seo:
     title: "FAQs"
+    description: "Opening times, parking, places to stay nearby, dietary requirements and cancellations at Restaurant Jericho in Plungar, in the Vale of Belvoir."
     image:
         url: Jericho_0014.jpg
         alt: "Halibut, Kohlrabi and fish roe"

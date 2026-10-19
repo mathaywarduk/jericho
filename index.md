@@ -1,7 +1,7 @@
 ---
 intro: Rooted by working the land, Restaurant Jericho creates a dining
   experience inspired by humble ingredients and the most honest way to cook,
-  fire.
+  fire
 intro_link_text: Our history
 food_text: From our kitchen garden and surrounding farms our tasting menu
   reflects the characteristics of our land.  Inherited knowledge and new skills

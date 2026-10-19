@@ -30,7 +30,9 @@ bundle exec jekyll serve
 
 The words on every page, the sample menu, site-wide text (`_data/site_text.yml`) and blog posts are edited with [Pages CMS](https://pagescms.org/), configured in `.pages.yml`. Saving commits to the repo, and Netlify rebuilds the site.
 
-Images, links and SEO settings aren't editable in the CMS; change them in the files. Images are served from imgix, so blog photos take an imgix filename (e.g. `Jericho_006.jpg`).
+Page images, links and SEO settings aren't editable in the CMS; change them in the files. Page images are imgix filenames (e.g. `Jericho_006.jpg`), served from `site.image_base`.
+
+Blog photos are uploaded through the CMS into `assets/images/uploads/` and resized by [Netlify Image CDN](https://docs.netlify.com/build/image-cdn/overview/) (see `_includes/image.html`). Hosted Pages CMS can't upload files over about 3MB, so editors need to shrink phone photos first. Locally, uploaded photos are served full size.
 
 The sample menu (`_data/menu.yml`) is one block of text: one course per line, wines start with `Wine:`, and a blank line leaves a gap.
 
@@ -42,9 +44,8 @@ One-off setup:
 
 ## Hosting (Netlify)
 
-Netlify builds `develop` using `netlify.toml`. One-off setup in the Netlify dashboard:
+The site is hosted on Netlify, which builds the `develop` branch using `netlify.toml` whenever it changes, including saves from Pages CMS. There's no manual publish step.
 
-1. **Add new site → Import from Git**, choose this repo and set the production branch to `develop`.
-2. **Domain management**: add `new.restaurantjericho.com` (staging until go-live) and create the DNS record Netlify asks for.
+DNS is on Cloudflare: `restaurantjericho.com` is a CNAME to `apex-loadbalancer.netlify.com` and `www` a CNAME to `restaurantjericho.netlify.app`, both set to DNS only (grey cloud) so Netlify can issue the HTTPS certificate. Email (MX) is Google and is separate.
 
-At go-live, point `restaurantjericho.com` at Netlify. `publish.sh` (GitHub Pages) is no longer needed after that.
+Builds run with `JEKYLL_ENV=netlify`: development mode needs jekyll-postcss's dev server, which won't start without an open stdin, and production mode breaks jekyll-minifier on `assets/js/app.js`.

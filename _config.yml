@@ -11,12 +11,10 @@ defaults:
     values:
       layout: post
 exclude:
+  - package.json
   - package-lock.json
   - postcss.config.js
   - tailwind.config.js
   - netlify.toml
-  - publish.sh
-  - headers
   - README.md
-  - VERSION
   - .pages.yml

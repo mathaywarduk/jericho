@@ -14,7 +14,7 @@ content:
     path: index.md
     format: yaml-frontmatter
     fields:
-      - { name: intro, label: Opening paragraph, type: text }
+      - { name: intro, label: Opening paragraph, type: text, description: "View this page: https://new.restaurantjericho.com/" }
       - { name: intro_link_text, label: Opening paragraph link, type: string }
       - { name: food_text, label: Food paragraph, type: text }
       - { name: food_link_text, label: Food paragraph link, type: string }
@@ -50,7 +50,7 @@ content:
     path: food.md
     format: yaml-frontmatter
     fields:
-      - &heading { name: heading, label: Big heading, type: text }
+      - { name: heading, label: Big heading, type: text, description: "View this page: https://new.restaurantjericho.com/food" }
       - &intro { name: intro, label: Opening paragraph, type: text }
       - name: sections
         label: Sections
@@ -83,7 +83,7 @@ content:
     path: history.md
     format: yaml-frontmatter
     fields:
-      - *heading
+      - { name: heading, label: Big heading, type: text, description: "View this page: https://new.restaurantjericho.com/history" }
       - *intro
       - name: sections
         label: Sections
@@ -103,7 +103,7 @@ content:
     path: _data/menu.yml
     format: yaml
     fields:
-      - { name: title, label: Menu name, type: string }
+      - { name: title, label: Menu name, type: string, description: "On the Our Food page: https://new.restaurantjericho.com/food" }
       - { name: prices, label: Prices, type: text, description: "One price per line." }
       - { name: small_print, label: Small print, type: string }
       - name: courses
@@ -117,7 +117,7 @@ content:
     path: faqs.md
     format: yaml-frontmatter
     fields:
-      - { name: body, label: FAQs, type: rich-text, options: { format: markdown } }
+      - { name: body, label: FAQs, type: rich-text, options: { format: markdown }, description: "View this page: https://new.restaurantjericho.com/faqs" }
       - *layout
       - *seo
 
@@ -127,7 +127,7 @@ content:
     path: terms.md
     format: yaml-frontmatter
     fields:
-      - { name: body, label: Terms and conditions, type: rich-text, options: { format: markdown } }
+      - { name: body, label: Terms and conditions, type: rich-text, options: { format: markdown }, description: "View this page: https://new.restaurantjericho.com/terms" }
       - *layout
       - *seo
 
@@ -140,7 +140,7 @@ content:
     view:
       primary: title
     fields:
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Title, type: string, required: true, description: "Posts appear on the Blog page, newest first: https://new.restaurantjericho.com/blog" }
       - { name: image, label: Photo, type: image, description: "Shown at the top of the post and on the Blog page. Photos must be under 3MB, so shrink phone photos first (e.g. at squoosh.app)." }
       - { name: image_alt, label: Photo description, type: string, description: "Read out by screen readers." }
       - { name: body, label: Post, type: rich-text, options: { format: markdown } }
@@ -155,7 +155,7 @@ content:
     path: _data/site_text.yml
     format: yaml
     fields:
-      - { name: email, label: Contact email, type: string, description: "Shown in the footer." }
+      - { name: email, label: Contact email, type: string, description: "Shown in the footer of every page: https://new.restaurantjericho.com/" }
       - { name: reservations_url, label: Reservations link, type: string }
       - { name: signup_heading, label: Newsletter heading, type: string, description: "On the home page." }
       - { name: signup_text, label: Newsletter text, type: text }

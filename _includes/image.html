@@ -23,10 +23,11 @@
 {% endif %}
 
 {% else %}
+{% comment %}auto=format: imgix serves AVIF or WebP to browsers that support them, JPEG otherwise{% endcomment %}
 {% if include.hero == "true" %}
-  {% capture opts %}&fp-x=0.4&fp-y=0.7&crop=edges&fit=crop{% endcapture %}
+  {% capture opts %}&fp-x=0.4&fp-y=0.7&crop=edges&fit=crop&auto=format{% endcapture %}
 {% else %}
-  {% capture opts %}&fit=crop&crop=edges{% endcapture %}
+  {% capture opts %}&fit=crop&crop=edges&auto=format{% endcapture %}
 {% endif %}
 
 

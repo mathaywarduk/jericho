@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-{% assign feature = page.body.feature %}
-{% assign contentBlock = page.body.content-block %}
-{% assign cta = page.body.call-to-action %}
 
 <div class="w-full h-screen-plus home-hero top-0 relative">
   {% include image.html url=page.hero.image.url alt=page.hero.image.alt fit="crop" ar="9:16" lgar="16:9" lazy="false" width="100%" height="100%" block_classes="h-full w-full absolute z-10" classes="object-cover h-full w-full" %}
@@ -15,11 +12,11 @@ layout: default
   <div class="md:flex md:mb-24">
 
     <div class="container md:hidden">
-      <p class="p-large">{{ feature.text }}</p>
+      <p class="p-large">{{ page.intro }}</p>
     </div>
     
     <div class="relative overflow-hidden md:w-1/2 lg:w-2/5 shrink-0 md:-ml-8 xl:-ml-18">
-      {% for image in feature.images %}
+      {% for image in page.intro_images %}
         {% if forloop.first %}
           {% assign blockClasses = "w-2/3 md:w-3/5 block -ml-5 pt-16" %}
         {% else %}
@@ -33,11 +30,10 @@ layout: default
     <div class="container md:grid md:grid-cols-6 md:gap-4 md:w-1/2 items-center">
       <div class="md:col-span-6 xxl:col-span-5">
         <p class="p-large mt-12">
-          <span class="hidden md:inline">{{ feature.text }}</span>
-          {{ feature.text2 }}
+          <span class="hidden md:inline">{{ page.intro }}</span>
         </p>
         <div>
-          <a href="{{ feature.link.path }}" class="link">{{ feature.link.text }}</a>
+          <a href="{{ page.intro_link }}" class="link">{{ page.intro_link_text }}</a>
         </div>
       </div>
     </div>
@@ -48,14 +44,14 @@ layout: default
   <div class="flex flex-col">
     <div class="container order-2 md:order-1 md:grid md:grid-cols-12 md:gap-4 z-10">
       <div class="md:col-start-2 md:col-end-11 xl:col-end-9 xxl:col-end-7">
-        <p>{{ contentBlock.text }}</p>
-        <a href="{{ contentBlock.link.path }}" class="link">{{ contentBlock.link.text }}</a>
+        <p>{{ page.food_text }}</p>
+        <a href="{{ page.food_link }}" class="link">{{ page.food_link_text }}</a>
       </div>
     </div>
     <div class="order-1 md:order-2 overflow-hidden lg:-mt-[165px] mb-12">
       <div class="flex gap-4 md:gap-16 lg:gap-32 justify-start items-baseline" data-scroll-int data-scroll-direction="rtl">
-        {% for image in contentBlock.images %}
-        {% if image.ar == '4:6' %}
+        {% for image in page.food_images %}
+        {% if image.ar == '4x6' %}
           {% assign width = 145 %}
           {% assign height = 218 %}
           {% assign blockClass = "w-[145px] h-[218px] sm:w-[190px] sm:h-[285px] md:w-[340px] md:h-[510px] lg:w-[536px] lg:h-[805px] shrink-0 object-cover" %}
@@ -75,14 +71,14 @@ layout: default
   <div class="my-24 md:grid md:grid-cols-12 md:gap-4 md:gap-y-32 xxl:gap-y-4 lg:items-start xl:h-screen xxl:items-center md:container">
     <div class="container md:no-container b-orange c-grey-dark py-10 text-center
        md:bg-transparent md:c-beige md:col-start-3 md:col-end-11 xxl:col-start-2 xxl:col-end-6">
-      <h2>{{ cta.title }}</h2>
-      <p>{{ cta.text }}</p>
-      <a href="{{ cta.link.path }}" target="{{ cta.link.target }}" class="link link--dark md:link--light">{{ cta.link.text }}</a>
+      <h2>{{ page.vouchers_heading }}</h2>
+      <p>{{ page.vouchers_text }}</p>
+      <a href="{{ page.vouchers_link }}" target="_blank" class="link link--dark md:link--light">{{ page.vouchers_button_text }}</a>
     </div>
     <div class="container md:no-container b-green c-beige py-10 text-center
        md:bg-transparent md:col-start-3 md:col-end-11 xxl:col-start-8 xxl:col-end-12">
-      <h2>Sign up for updates</h2>
-      <p>Get the latest from the farm and be the first to know when we open reservations.</p>
+      <h2>{{ site.data.site_text.signup_heading }}</h2>
+      <p>{{ site.data.site_text.signup_text }}</p>
       <div id="mc_embed_shell">
         <div id="mc_embed_signup">
           <form action="https://restaurantjericho.us17.list-manage.com/subscribe/post?u=d48794544bce58ea5c8d6ed0f&amp;id=f9691df7f4&amp;f_id=001c8ee2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">

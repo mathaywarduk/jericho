@@ -1,0 +1,165 @@
+# Pages CMS configuration — https://pagescms.org/docs/configuration/
+#
+# Editors only see the words on each page. Images, links and SEO settings are
+# declared as hidden fields so saving keeps them; change those in the files.
+
+media:
+  input: assets/images/uploads
+  output: /assets/images/uploads
+
+content:
+  - name: home
+    label: Home
+    type: file
+    path: index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: intro, label: Opening paragraph, type: text }
+      - { name: intro_link_text, label: Opening paragraph link, type: string }
+      - { name: food_text, label: Food paragraph, type: text }
+      - { name: food_link_text, label: Food paragraph link, type: string }
+      - { name: vouchers_heading, label: Gift vouchers heading, type: string }
+      - { name: vouchers_text, label: Gift vouchers text, type: text }
+      - { name: vouchers_button_text, label: Gift vouchers button, type: string }
+      # Not editable here
+      - { name: layout, type: string, hidden: true }
+      - { name: title, type: string, hidden: true }
+      - { name: bodyClass, type: string, hidden: true }
+      - { name: intro_link, type: string, hidden: true }
+      - { name: food_link, type: string, hidden: true }
+      - { name: vouchers_link, type: string, hidden: true }
+      - name: hero
+        type: object
+        hidden: true
+        fields:
+          - { name: image, type: object, fields: [{ name: url, type: string }, { name: alt, type: string }] }
+      - { name: intro_images, type: object, list: true, hidden: true, fields: [{ name: url, type: string }, { name: alt, type: string }] }
+      - { name: food_images, type: object, list: true, hidden: true, fields: [{ name: url, type: string }, { name: alt, type: string }, { name: ar, type: string }] }
+      - &seo
+        name: seo
+        type: object
+        hidden: true
+        fields:
+          - { name: title, type: string }
+          - { name: description, type: string }
+          - { name: image, type: object, fields: [{ name: url, type: string }, { name: alt, type: string }] }
+
+  - name: food
+    label: Our Food
+    type: file
+    path: food.md
+    format: yaml-frontmatter
+    fields:
+      - &heading { name: heading, label: Big heading, type: text }
+      - &intro { name: intro, label: Opening paragraph, type: text }
+      - name: sections
+        label: Sections
+        type: object
+        list: { min: 2, max: 2 }
+        fields: &section-fields
+          - { name: heading, label: Heading, type: string, description: "Optional." }
+          - { name: text, label: Text, type: text, description: "Leave a blank line between paragraphs." }
+          - { name: link_text, label: Button, type: string, description: "Only shows on sections that already have a button." }
+          # Not editable here
+          - { name: link, type: string, hidden: true }
+          - { name: flip, type: boolean, hidden: true }
+          - &images { name: images, type: object, list: true, hidden: true, fields: [{ name: url, type: string }, { name: alt, type: string }, { name: orientation, type: string }] }
+      # Not editable here
+      - &layout { name: layout, type: string, hidden: true }
+      - &title { name: title, type: string, hidden: true }
+      - &hero
+        name: hero
+        type: object
+        hidden: true
+        fields:
+          - { name: image, type: object, fields: [{ name: url, type: string }, { name: alt, type: string }, { name: ar, type: string }] }
+          - { name: align, type: string }
+      - &intro-images { name: intro_images, type: object, list: true, hidden: true, fields: [{ name: url, type: string }, { name: alt, type: string }, { name: orientation, type: string }] }
+      - *seo
+
+  - name: history
+    label: History
+    type: file
+    path: history.md
+    format: yaml-frontmatter
+    fields:
+      - *heading
+      - *intro
+      - name: sections
+        label: Sections
+        type: object
+        list: { min: 1, max: 1 }
+        fields: *section-fields
+      - *layout
+      - *title
+      - *hero
+      - *intro-images
+      - { name: intro_align, type: string, hidden: true }
+      - *seo
+
+  - name: menu
+    label: Sample menu
+    type: file
+    path: _data/menu.yml
+    format: yaml
+    fields:
+      - { name: title, label: Menu name, type: string }
+      - { name: prices, label: Prices, type: text, description: "One price per line." }
+      - { name: small_print, label: Small print, type: string }
+      - name: courses
+        label: Courses
+        type: text
+        description: "One course per line. Start wines with “Wine:”. Leave a blank line to add a gap."
+
+  - name: faqs
+    label: FAQs
+    type: file
+    path: faqs.md
+    format: yaml-frontmatter
+    fields:
+      - { name: body, label: FAQs, type: rich-text, options: { format: markdown } }
+      - *layout
+      - *seo
+
+  - name: terms
+    label: Terms and conditions
+    type: file
+    path: terms.md
+    format: yaml-frontmatter
+    fields:
+      - { name: body, label: Terms and conditions, type: rich-text, options: { format: markdown } }
+      - *layout
+      - *seo
+
+  - name: blog
+    label: Blog
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{title}.md"
+    view:
+      primary: title
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: image, label: Photo, type: string, description: "Filename of a photo on imgix, e.g. Jericho_006.jpg" }
+      - { name: image_alt, label: Photo description, type: string, description: "Read out by screen readers." }
+      - { name: body, label: Post, type: rich-text, options: { format: markdown } }
+      # Not editable here
+      - { name: layout, type: string, hidden: true }
+      - { name: image_shape, type: string, hidden: true }
+      - *seo
+
+  - name: site_text
+    label: Site text
+    type: file
+    path: _data/site_text.yml
+    format: yaml
+    fields:
+      - { name: email, label: Contact email, type: string, description: "Shown in the footer." }
+      - { name: reservations_url, label: Reservations link, type: string }
+      - { name: signup_heading, label: Newsletter heading, type: string, description: "On the home page." }
+      - { name: signup_text, label: Newsletter text, type: text }
+      - { name: menu_heading, label: Sample menu heading, type: string, description: "On the Our Food page." }
+      - { name: menu_text, label: Sample menu text, type: text }
+      - { name: menu_link_text, label: Sample menu reservation link, type: string }
+      - { name: blog_heading, label: Blog page heading, type: string }

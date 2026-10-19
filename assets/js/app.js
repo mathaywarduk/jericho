@@ -152,4 +152,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
   [...document.querySelectorAll("[data-blur-load]")].map((el) => BlurLoad(el));
   [...document.querySelectorAll("[data-scroll-int]")].map((el) => BindScroll(el));
   [...document.querySelectorAll("[data-tabs]")].map((el) => BindTabs(el));
+
+  // Links in CMS-edited content can't set a target, so open other sites in a new tab
+  [...document.querySelectorAll(".content-block a[href^='http'], .prose a[href^='http']")]
+    .filter((el) => el.hostname != window.location.hostname)
+    .map((el) => el.target = "_blank");
 });

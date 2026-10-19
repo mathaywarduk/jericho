@@ -1,13 +1,9 @@
 ---
 layout: post
 title: "Michelin Guide Ceremony 2025 - Restaurant Jericho awarded Green Star"
-hero:
-    text: "Michelin Guide Ceremony 2025 - Restaurant Jericho awarded Green Star"
-    image:
-        url: Michelin-stage.jpg
-        alt: "Lincolnshire Poacher, Bramley"
-        ar: "3:4"
-    align: left
+image: Michelin-stage.jpg
+image_alt: "Lincolnshire Poacher, Bramley"
+image_shape: "3x4"
 seo:
   title: "Michelin Guide Ceremony 2025 - Restaurant Jericho awarded Green Star"
   description: ""

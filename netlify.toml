@@ -1,0 +1,15 @@
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  # Not "development": jekyll-postcss's dev server needs an open stdin, which
+  # CI doesn't have. Not "production": jekyll-minifier fails on app.js.
+  JEKYLL_ENV = "netlify"
+  RUBY_VERSION = "3.3.5"
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "no-cache"

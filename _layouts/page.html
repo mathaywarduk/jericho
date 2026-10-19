@@ -3,14 +3,13 @@ layout: default
 ---
 
 {% assign hero = page.hero %}
-{% assign feature = page.body.feature %}
-{% assign textBlocks = page.body.textBlocks %}
-{% assign imagesBlock = page.body.imagesBlock %}
+{% assign textBlocks = page.sections %}
+{% assign imagesBlock = page.imagesBlock %}
 
 
 {% if hero %}
   <!-- START: Hero -->
-  {% assign heroClasses = "hero-image hero-image--" | append:hero.image.ar  %}
+  {% assign heroClasses = "hero-image hero-image--" | append: hero.image.ar | replace: "x", ":" %}
   {% assign blockClasses = "flex justify-center" %}
   <section class="hero relative z-10
     lg:py-16 lg:container lg:grid lg:grid-cols-12 lg:gap-4
@@ -24,7 +23,7 @@ layout: default
       lg:mt-0 lg:no-container lg:col-span-7 lg:row-span-full
       xl:col-span-8
       {% if hero.align == 'left' %} lg:col-start-1 lg:col-end-8 lg:self-start xl:col-end-9 {% else %} lg:col-start-6 lg:self-end xl:col-start-5 {% endif %}">
-      <h1 class="">{{ hero.text | widont }}</h1>
+      <h1 class="">{{ page.heading | widont }}</h1>
     </div>
   </section>
 
@@ -32,19 +31,19 @@ layout: default
 {% endif %}
 
 
-{% if feature %}
+{% if page.intro and page.intro != "" %}
 <!-- START: Feature -->
 <section class="my-12 lg:flex lg:items-center">
-  {% if feature.images.size > 0 %}
-  <div class="flex gap-6 mb-12 lg:mb-0 lg:w-1/2 lg:shrink-0 lg:gap-12 xl:gap-16 xxl:gap-20 items-center {% if feature.align == 'right' %} lg:order-2 {% endif %}">
-    {% for image in feature.images %}
+  {% if page.intro_images.size > 0 %}
+  <div class="flex gap-6 mb-12 lg:mb-0 lg:w-1/2 lg:shrink-0 lg:gap-12 xl:gap-16 xxl:gap-20 items-center {% if page.intro_align == 'right' %} lg:order-2 {% endif %}">
+    {% for image in page.intro_images %}
       {% if forloop.index > 1 and forloop.last %}
         {% assign blockClasses = "w-1/2 shrink-0" %}
       {% else  %}
         {% assign blockClasses = "" %}
       {% endif %}
 
-      {% if feature.orientation == 'landscape' %}
+      {% if page.intro_orientation == 'landscape' %}
         {% assign imageWidth = 700 %}
         {% assign imageHeight = 1000 %}
       {% else %}
@@ -56,8 +55,8 @@ layout: default
     {% endfor %}
   </div>
   {% endif %}
-  <div class="container grid grid-cols-5 lg:max-w-half-container {% if feature.align == 'right' %} lg:order-1 lg:ml-auto {% else %} lg:mr-auto {% endif %}">
-    <p class="p-large col-span-5 xl:col-span-4 {% if feature.align == 'right' %}xl:col-start-2{% endif %}">{{ feature.text | newline_to_br | widont }}</p>
+  <div class="container grid grid-cols-5 lg:max-w-half-container {% if page.intro_align == 'right' %} lg:order-1 lg:ml-auto {% else %} lg:mr-auto {% endif %}">
+    <p class="p-large col-span-5 xl:col-span-4 {% if page.intro_align == 'right' %}xl:col-start-2{% endif %}">{{ page.intro | newline_to_br | widont }}</p>
   </div>
 
 </section>
@@ -70,7 +69,7 @@ layout: default
     <div class="order-1 md:order-2 overflow-hidden my-12 lg:my-48">
       <div class="flex gap-4 md:gap-16 lg:gap-32 justify-start items-baseline" data-scroll-int data-scroll-direction="rtl">
         {% for image in imagesBlock.images %}
-        {% if image.ar == '4:6' %}
+        {% if image.ar == '4x6' %}
           {% assign width = 145 %}
           {% assign height = 218 %}
           {% assign blockClass = "w-[145px] h-[218px] sm:w-[190px] sm:h-[285px] md:w-[340px] md:h-[510px] lg:w-[536px] lg:h-[805px] shrink-0 object-cover" %}
@@ -118,12 +117,12 @@ layout: default
       {% endfor %}
 
     <div class="container order-1 lg:order-2">
-      {% if block.heading %}
+      {% if block.heading and block.heading != "" %}
         <h2 class="text-lg awks:text-xl md:text-2xl font-headings font-extralight leading-tight tracking-wide mb-8 md:mb-12">{{ block.heading }}</h2>
       {% endif %}
       <p>{{ block.text | newline_to_br | widont }}</p>
-      {% if block.link %}
-      <a href="{{ block.link.path }}" class="link">{{ block.link.text }}</a>
+      {% if block.link and block.link != "" and block.link_text and block.link_text != "" %}
+      <a href="{{ block.link }}"{% if block.link contains "://" %} target="_blank"{% endif %} class="link">{{ block.link_text }}</a>
       {% endif %}
     </div>
 
@@ -144,43 +143,49 @@ layout: default
 {% endif %}
 
 {% if page.url == "/food" %}
-  {% if site.data.menus.size %}
-  <!-- START: Menus -->
+  {% assign menu = site.data.menu %}
+  {% if menu.courses %}
+  <!-- START: Menu -->
+  {% comment %}
+    The courses are one block of text: one course per line, wines start with
+    "Wine:", and a blank line leaves a gap after the line before it.
+  {% endcomment %}
+  {% capture newline %}
+{% endcapture %}
+  {% assign lines = menu.courses | strip | split: newline %}
   <section class="container b-beige c-black pt-12 pb-[300px] md:pb-[240px] bg-leaf-orange relative md:z-30">
     <div class="lg:w-5/6 lg:mx-auto relative">
-      <h2>Sample Menu{% if site.data.menus.size > 1%}s{% endif %}</h2>
-      <p class="xl:max-w-7/12">Our menu changes based on what is seasonal and fresh, please see our sample menu to provide an idea of the format.</p>
-      <div {% if site.data.menus.size > 1%}data-tabs{% endif %}>
-        {% if site.data.menus.size > 1%}
-          <div class="hidden tab-nav" data-tabs-nav>
-            {% for menu in site.data.menus %}
-            <button data-tabs-target="#menu-{{ forloop.index }}" class="tab-button">{{ menu.title }}</button>
-            {% endfor %}
-          </div>
-        {% endif %}
-        {% for menu in site.data.menus %}
-          {% if site.data.menus.size > 1%}
-            <h3 class="uppercase text-md font-semibold font-type mb-4 md:mb-16" data-tabs-title>{{ menu.title }}</h3>
-          {% endif %}
-          <div id="menu-{{ forloop.index }}">
-            <div class="md:flex md:justify-between md:mb-12">
-              <div class="font-type text-base md:text-md mb-6 md:order-2 md:sticky md:top-8 md:self-start">
-                {{ menu.cost | newline_to_br }}<br>
-                {% if menu.disclaimer %}<em class="text-sm">{{ menu.disclaimer }}</em>{% endif %}<br>
-                <br>
-                <a href="https://booking.resdiary.com/widget/Standard/RestaurantJericho/37740" target="_blank" class="link link--dark-orange">Make a reservation</a>
-              </div>
-              <ul class="mb-12 font-extralight text-base md:text-md">
-              {% for course in menu.courses %}
-                  <li class="-indent-2.5 ml-2.5 {% if course.space %} mb-6 {% endif %} {% if course.type == 'drink' %} font-type italic c-orange-dark {% endif %}">{{ course.description }}</li>
-              {% endfor %}
-              </ul>
+      <h2>{{ site.data.site_text.menu_heading }}</h2>
+      <p class="xl:max-w-7/12">{{ site.data.site_text.menu_text }}</p>
+      <div>
+        <div id="menu-1">
+          <div class="md:flex md:justify-between md:mb-12">
+            <div class="font-type text-base md:text-md mb-6 md:order-2 md:sticky md:top-8 md:self-start">
+              {{ menu.prices | newline_to_br }}<br>
+              {% if menu.small_print and menu.small_print != "" %}<em class="text-sm">{{ menu.small_print }}</em>{% endif %}<br>
+              <br>
+              <a href="{{ site.data.site_text.reservations_url }}" target="_blank" class="link link--dark-orange">{{ site.data.site_text.menu_link_text }}</a>
             </div>
+            <ul class="mb-12 font-extralight text-base md:text-md">
+            {% for line in lines %}
+              {% assign course = line | strip %}
+              {% if course == "" %}{% continue %}{% endif %}
+              {% assign next = lines[forloop.index] | strip %}
+              {% assign prefix = course | slice: 0, 5 | downcase %}
+              {% if prefix == "wine:" %}
+                {% assign wine = true %}
+                {% assign course = course | slice: 5, 1000 | strip %}
+              {% else %}
+                {% assign wine = false %}
+              {% endif %}
+                <li class="-indent-2.5 ml-2.5 {% if next == "" and forloop.last == false %} mb-6 {% endif %} {% if wine %} font-type italic c-orange-dark {% endif %}">{{ course }}</li>
+            {% endfor %}
+            </ul>
           </div>
-        {% endfor %}
+        </div>
       </div>
     </div>
   </section>
-  <!-- END: Menus -->
+  <!-- END: Menu -->
   {% endif %}
 {% endif %}

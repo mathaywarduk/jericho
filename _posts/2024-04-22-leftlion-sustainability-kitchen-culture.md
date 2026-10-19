@@ -1,13 +1,9 @@
 ---
 layout: post
 title:  "Restaurant Jericho chat to LeftLion about sustainability and kitchen culture"
-hero:
-    text: "Restaurant Jericho chat to LeftLion about sustainability and kitchen culture"
-    image:
-        url: Jericho_009.jpg
-        alt: "Lincolnshire Poacher, Bramley"
-        ar: "4:3"
-    align: left
+image: Jericho_009.jpg
+image_alt: "Lincolnshire Poacher, Bramley"
+image_shape: "4x3"
 seo:
   title: "Restaurant Jericho chat to LeftLion about sustainability and kitchen culture"
   description: "Recently, Rich sat down with Julia Head of Nottingham's iconic LeftLion magazine to share the story behind Restaurant Jericho."

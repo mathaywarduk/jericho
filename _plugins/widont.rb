@@ -15,10 +15,10 @@ require 'liquid'
 module WidontFilter
 
   # Return the element's text after applying the filter
+  # Joins the last two words of each line (and so each paragraph after
+  # newline_to_br) with a non-breaking space
   def widont(text)
-    text.strip!
-    text[text.rindex(' '), 1] = '&nbsp;' if text.rindex(' ')
-    return text
+    text.to_s.strip.gsub(/([^\s<>]+)[ \t]+([^\s<>]+)((?:<br\s*\/?>)?)[ \t]*$/) { "#{$1}&nbsp;#{$2}#{$3}" }
   end
     
 end

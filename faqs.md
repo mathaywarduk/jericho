@@ -9,7 +9,7 @@ seo:
 
 ## What are your opening hours?
 
-See <a href="https://booking.resdiary.com/widget/Standard/RestaurantJericho/37740" target="_blank">reservations</a> for the most up-to-date availability.
+See [reservations](https://booking.resdiary.com/widget/Standard/RestaurantJericho/37740) for the most up-to-date availability.
 
 Our evening tasting menu is available **Friday and Saturday evenings at 7pm**. The Bar is open from 6.30pm for Pre Dinner drinks.
 
@@ -26,12 +26,10 @@ Yes, we have a large car park to the rear of the restaurant, between the two bar
 
 There are a few local places to stay. The details can be found below. All accommodation requires a short car ride to get to us distances are listed below:
 
-<ul>
-    <li><a href="https://www.theoldnurseriesbandb.com/rooms__rates" target="_blank">The Old Nurseries B&B Stathern</a> (5 Mins Drive)</li>
-    <li><a href="https://langarhall.com" target="_blank">Langar Hall</a> (10 Mins Drive)</li>
-    <li><a href="https://www.thegrangebedandbreakfastnotts.co.uk" target="_blank">The Grange Bed and Breakfast, Elton on the Hill</a> (5 Mins Drive)</li>
-    <li><a href="https://tinandwood.co.uk" target="_blank">Tin and Wood Shepherds Huts</a> are in the village and within walking distance, however they do have a minimum stay of 3 nights.</li>
-</ul>
+- [The Old Nurseries B&B Stathern](https://www.theoldnurseriesbandb.com/rooms__rates) (5 Mins Drive)
+- [Langar Hall](https://langarhall.com) (10 Mins Drive)
+- [The Grange Bed and Breakfast, Elton on the Hill](https://www.thegrangebedandbreakfastnotts.co.uk) (5 Mins Drive)
+- [Tin and Wood Shepherds Huts](https://tinandwood.co.uk) are in the village and within walking distance, however they do have a minimum stay of 3 nights.
 
 **We allow Camper Vans and Motor Homes to park overnight in our Large secure Carpark for a small additional fee of £20.**
 
@@ -52,7 +50,7 @@ If you are making a group booking, it is your responsibility to make us aware of
 
 ## Can I cancel or modify my booking?
 
-Yes, as long as we have at least 72 hours’ notice. Your £50 deposit is **non-refundable**. If there are any cancellations or amendments to bookings (in part or whole) with less than 72 hours notice, a full £130pp dinner fee will be charged (Your deposit will be included in this amount). This charge reflects the cost of food, drink and staffing incurred with short-notice changes.
+Yes, as long as we have at least 72 hours’ notice. Your £50 deposit is **non-refundable**. If there are any cancellations or amendments to bookings (in part or whole) with less than 72 hours notice, a full £150pp dinner fee will be charged (Your deposit will be included in this amount). This charge reflects the cost of food, drink and staffing incurred with short-notice changes.
 
 Please see our [Terms and Conditions](/terms).
 

@@ -5,7 +5,18 @@ plugins:
   - jekyll-postcss
   - jekyll-minifier
 image_base:  https://jericho.imgix.net/
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
 exclude:
   - package-lock.json
   - postcss.config.js
   - tailwind.config.js
+  - netlify.toml
+  - publish.sh
+  - headers
+  - README.md
+  - VERSION
+  - .pages.yml

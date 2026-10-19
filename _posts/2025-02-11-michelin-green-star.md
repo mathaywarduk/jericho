@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Michelin Guide Ceremony 2025 - Restaurant Jericho awarded Green Star"
-image: Michelin-stage.jpg
+image: /assets/images/uploads/Michelin-stage.jpg
 image_alt: "Lincolnshire Poacher, Bramley"
 image_shape: "3x4"
 seo:

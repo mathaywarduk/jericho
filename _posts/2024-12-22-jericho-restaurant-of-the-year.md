@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jericho named best restaurant of 2024 by the Sunday Times"
-image: Jericho_002.jpg
+image: /assets/images/uploads/Jericho_002.jpg
 image_alt: "A table setting at Restaurant Jericho"
 image_shape: "4x3"
 seo:

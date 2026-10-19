@@ -6,7 +6,7 @@ intro_link_text: Our history
 food_text: From our kitchen garden and surrounding farms our tasting menu
   reflects the characteristics of our land.  Inherited knowledge and new skills
   combine to create vibrant food and a relaxed atmosphere.
-food_link_text: Read more
+food_link_text: About our food
 vouchers_heading: Gift vouchers
 vouchers_text: A thoughtful gift, something to look forward to or a reason to
   get away. Our gift vouchers are beautifully presented.

@@ -1,8 +1,13 @@
 .bg-leaf-blue {
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-image: url("/assets/images/leaf_blue.webp");
+  /* 60% of a phone screen is at most ~460px, so phones get a 600px version */
+  background-image: url("/assets/images/leaf_blue_600.webp");
   background-size: 60%;
+
+  @screen md {
+    background-image: url("/assets/images/leaf_blue.webp");
+  }
 
  /* @screen md {
     background-size: 40%;
@@ -21,8 +26,13 @@
 .bg-leaf-orange {
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-image: url("/assets/images/leaf_orange.webp");
+  /* 60% of a phone screen is at most ~460px, so phones get a 600px version */
+  background-image: url("/assets/images/leaf_orange_600.webp");
   background-size: 60%;
+
+  @screen md {
+    background-image: url("/assets/images/leaf_orange.webp");
+  }
 
 /*  @screen md {
     background-size: 40%;

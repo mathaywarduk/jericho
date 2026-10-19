@@ -141,7 +141,7 @@ content:
       primary: title
     fields:
       - { name: title, label: Title, type: string, required: true }
-      - { name: image, label: Photo, type: image, description: "Shown at the top of the post and on the Blog page." }
+      - { name: image, label: Photo, type: image, description: "Shown at the top of the post and on the Blog page. Photos must be under 3MB, so shrink phone photos first (e.g. at squoosh.app)." }
       - { name: image_alt, label: Photo description, type: string, description: "Read out by screen readers." }
       - { name: body, label: Post, type: rich-text, options: { format: markdown } }
       # Not editable here

@@ -1,6 +1,28 @@
 {% comment %}Aspect ratios are written 3x4 in front matter, imgix wants 3:4{% endcomment %}
 {% assign ar = include.ar | replace: "x", ":" %}
 {% assign lgar = include.lgar | replace: "x", ":" %}
+{% assign first_char = include.url | slice: 0 %}
+
+{% if first_char == "/" %}
+{% comment %}
+  Uploaded through the CMS (a path in this repo, not an imgix filename).
+  On Netlify these are resized by its Image CDN; elsewhere they're served as-is.
+{% endcomment %}
+{% if jekyll.environment == "netlify" %}
+  {% assign widths = "2560,1920,1600,1280,1024,768,480,300" | split: "," %}
+  {% capture srcset %}{% for width in widths %}{% assign w = width | plus: 0 %}{% if w >= 1280 and lgar != "" %}{% assign ratio = lgar %}{% else %}{% assign ratio = ar %}{% endif %}{% assign h = "" %}{% if ratio != "" %}{% assign parts = ratio | split: ":" %}{% assign h = w | times: parts[1] | divided_by: parts[0] %}{% endif %}/.netlify/images?url={{ include.url | url_encode }}&w={{ w }}{% if h != "" %}&h={{ h }}&fit=cover{% endif %} {{ w }}w{% unless forloop.last %},
+    {% endunless %}{% endfor %}{% endcapture %}
+<picture class="{{ include.block_classes }}">
+  <img src="/.netlify/images?url={{ include.url | url_encode }}&w=10&q=30" alt="{{ include.alt }}" {% if include.lazy == "true" %}loading="lazy"{% endif %} sizes="{% if sizes %}{{ sizes }}{% else %}(max-width: 2560px) 100vw, 2560px{% endif %}" width="{{ include.width }}" height="{{ include.height }}" class="{{ include.classes }}"
+    srcset="{{ srcset }}">
+</picture>
+{% else %}
+<picture class="{{ include.block_classes }}">
+  <img src="{{ include.url }}" alt="{{ include.alt }}" {% if include.lazy == "true" %}loading="lazy"{% endif %} width="{{ include.width }}" height="{{ include.height }}" class="{{ include.classes }}">
+</picture>
+{% endif %}
+
+{% else %}
 {% if include.hero == "true" %}
   {% capture opts %}&fp-x=0.4&fp-y=0.7&crop=edges&fit=crop{% endcapture %}
 {% else %}
@@ -19,3 +41,4 @@
     {{ site.image_base }}{{ include.url }}?w=480{{opts}}{% if include.ar %}&ar={{ ar }}{% endif %} 480w,
     {{ site.image_base }}{{ include.url }}?w=300{{opts}}{% if include.ar %}&ar={{ ar }}{% endif %} 300w">
 </picture>
+{% endif %}

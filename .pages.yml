@@ -59,9 +59,9 @@ content:
         fields: &section-fields
           - { name: heading, label: Heading, type: string, description: "Optional." }
           - { name: text, label: Text, type: text, description: "Leave a blank line between paragraphs." }
-          - { name: link_text, label: Button, type: string, description: "Only shows on sections that already have a button." }
+          - { name: link_text, label: Button text, type: string, description: "Fill in both button fields to show a button. Leave both empty for no button." }
+          - { name: link, label: Button link, type: string, description: "A page like /history or a full web address. Other websites open in a new tab." }
           # Not editable here
-          - { name: link, type: string, hidden: true }
           - { name: flip, type: boolean, hidden: true }
           - &images { name: images, type: object, list: true, hidden: true, fields: [{ name: url, type: string }, { name: alt, type: string }, { name: orientation, type: string }] }
       # Not editable here
@@ -141,7 +141,7 @@ content:
       primary: title
     fields:
       - { name: title, label: Title, type: string, required: true }
-      - { name: image, label: Photo, type: string, description: "Filename of a photo on imgix, e.g. Jericho_006.jpg" }
+      - { name: image, label: Photo, type: image, description: "Shown at the top of the post and on the Blog page." }
       - { name: image_alt, label: Photo description, type: string, description: "Read out by screen readers." }
       - { name: body, label: Post, type: rich-text, options: { format: markdown } }
       # Not editable here

@@ -3,6 +3,15 @@
 {%- assign seo_description = page.seo.description | default: seo_excerpt -%}
 {%- assign seo_image_url = page.seo.image.url | default: page.image | default: page.hero.image.url -%}
 {%- assign seo_image_alt = page.seo.image.alt | default: page.image_alt | default: page.hero.image.alt -%}
+{%- assign seo_image_first_char = seo_image_url | slice: 0 -%}
+{%- if seo_image_first_char == "/" -%}
+  {%- comment -%}Uploaded through the CMS, so resized by Netlify rather than imgix{%- endcomment -%}
+  {%- capture seo_image_og -%}{{ site.url }}/.netlify/images?url={{ seo_image_url | url_encode }}&w=1200&h=630&fit=cover{%- endcapture -%}
+  {%- capture seo_image_twitter -%}{{ site.url }}/.netlify/images?url={{ seo_image_url | url_encode }}&w=1200&h=600&fit=cover{%- endcapture -%}
+{%- else -%}
+  {%- capture seo_image_og -%}{{ site.image_base }}{{ seo_image_url }}?w=1200&h=630&fit=crop{%- endcapture -%}
+  {%- capture seo_image_twitter -%}{{ site.image_base }}{{ seo_image_url }}?w=1200&h=600&fit=crop{%- endcapture -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,7 +36,7 @@
     <meta content="{{ site.url }}" property="og:url">
     <meta content="{{ seo_title }} - Restaurant Jericho" property="og:title">
     <meta content="{{ seo_description }}" property="og:description">
-    <meta content="{{ site.image_base }}{{ seo_image_url }}w=1200&h=630&fit=crop" property="og:image">
+    <meta content="{{ seo_image_og }}" property="og:image">
     <meta content="1200" property="og:image:width">
     <meta content="630" property="og:image:height">
     <meta content="{{ seo_image_alt }}" property="og:image:alt">
@@ -35,7 +44,7 @@
     <meta name="twitter:creator" content="@madebykind">
     <meta name="twitter:title" content="{{ seo_title }}">
     <meta name="twitter:description" content="{{ seo_description }}">
-    <meta name="twitter:image" content="{{ site.image_base }}{{ seo_image_url }}?w=1200&h=600&fit=crop">
+    <meta name="twitter:image" content="{{ seo_image_twitter }}">
     <meta name="twitter:image:width" content="1200">
     <meta name="twitter:image:height" content="600">
     <meta name="twitter:image:alt" content="{{ seo_image_alt }}">
